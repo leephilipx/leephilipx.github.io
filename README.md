@@ -1,2 +1,2 @@
-# EE0005 Mini Project
-This is where we store the dataset so we can download it from Google Colab
+# https://leephilipx.github.io/
+This site showcases my GitHub projects and acts as storage for file retrieval via ```wget```.
