@@ -8,12 +8,12 @@ def generate_pilots(P):
     if os.path.isfile(Pilot_file_name):
         # load file
         bits = np.loadtxt(Pilot_file_name, delimiter=',')
-        print('Pilot file loaded!')
+        print('• Pilot file loaded:', Pilot_file_name)
     else:
         # write file
         bits = np.random.binomial(n=1, p=0.5, size=(K*mu, ))
         np.savetxt(Pilot_file_name, bits, delimiter=',')
-        print('New pilot file created!')
+        print('• New pilot file created:', Pilot_file_name)
     return modulate(bits)
 
 def generate_rician_channel(K_rice, channel_len):
@@ -33,7 +33,7 @@ def generate_channel_response_set():
         channel_response = np.ndarray.tolist(np.load(channel_response_file_name))
         channel_response_set_train = channel_response[:5000]
         channel_response_set_test = channel_response[5000:]
-        print('Channel response file loaded!')
+        print('• Channel response file loaded:', channel_response_file_name)
     else:
         # write file
         channel_response_set_train = []
@@ -46,7 +46,7 @@ def generate_channel_response_set():
                 channel_response_set_test = channel_response_set_test + [generate_rician_channel(K_rice, channel_len) for _ in range(50)]
         channel_response = channel_response_set_train + channel_response_set_test
         np.save(channel_response_file_name, channel_response)
-        print('Channel response file created!')
+        print('• Channel response file created:', channel_response_file_name)
     return channel_response_set_train, channel_response_set_test
 
 
