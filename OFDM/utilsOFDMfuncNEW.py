@@ -2,7 +2,7 @@ import numpy as np
 
 ### =================== Synthetic Generation ================ ###
 
-def generate_pilots():
+def generate_pilots(P):
     Pilot_file_name = 'Pilot_' + str(P)
     if os.path.isfile(Pilot_file_name):
         # load file
