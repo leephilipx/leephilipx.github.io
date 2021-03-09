@@ -3,7 +3,7 @@ import os
 
 ### =================== Synthetic Generation ================ ###
 
-def generate_pilots(P):
+def generate_pilots(P, K):
     Pilot_file_name = 'Pilot_' + str(P)
     if os.path.isfile(Pilot_file_name):
         # load file
