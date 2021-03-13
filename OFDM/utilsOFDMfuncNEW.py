@@ -3,7 +3,7 @@ import os
 
 ### =================== Synthetic Generation ================ ###
 
-def generate_pilots(P, K, mu):
+def generate_pilots(P, mu):
     Pilot_file_name = 'Pilot_' + str(P)
     if os.path.isfile(Pilot_file_name):
         # load file
@@ -11,7 +11,7 @@ def generate_pilots(P, K, mu):
         print('• Pilot file loaded:', Pilot_file_name)
     else:
         # write file
-        bits = np.random.binomial(n=1, p=0.5, size=(K*mu, ))
+        bits = np.random.binomial(n=1, p=0.5, size=(P*mu, ))
         np.savetxt(Pilot_file_name, bits, delimiter=',')
         print('• New pilot file created:', Pilot_file_name)
     return modulate(bits)
