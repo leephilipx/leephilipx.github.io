@@ -130,8 +130,8 @@ def ofdm_gen(snrDB, H_type, params, channel_response_set_train, channel_response
 
 
 
-def instantiate_DL_model(params, stack_output_shape=2**3):
-    print('Instantiating deep learning model \'channel_estimation_stack\'')
+def instantiate_DL_model(params, verbose=True, stack_output_shape=2**3):
+    if verbose: print('Instantiating deep learning model \'channel_estimation_stack\'')
     def bit_err(y_true, y_pred):
         err = 1 - tf.reduce_mean(
             tf.reduce_mean(
@@ -152,7 +152,7 @@ def instantiate_DL_model(params, stack_output_shape=2**3):
     output_signal = tf.keras.layers.Concatenate(axis=1, name='concatenate')([serial_stack(input_bits, stack_output_shape, i+1) for i in range(stack_count)])
     model = tf.keras.Model(input_bits, output_signal, name='channel_estimation_stack')
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=[bit_err])
-    print(f'>> Each stack predicts {stack_output_shape} bits, with a total of {stack_count} stacks predicting {params["n_bits_out"]} total bits!')
+    if verbose: print(f'>> Each stack predicts {stack_output_shape} bits, with a total of {stack_count} stacks predicting {params["n_bits_out"]} total bits!')
     return model
 
 
