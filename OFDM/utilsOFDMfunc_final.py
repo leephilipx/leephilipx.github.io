@@ -131,7 +131,7 @@ def ofdm_gen(snrDB, H_type, params, channel_response_set_train, channel_response
 
 
 def instantiate_DL_model(params, stack_output_shape=2**3):
-    print('Instatiating deep learning model \'channel_estimation_stack\'')
+    print('Instantiating deep learning model \'channel_estimation_stack\'')
     def bit_err(y_true, y_pred):
         err = 1 - tf.reduce_mean(
             tf.reduce_mean(
