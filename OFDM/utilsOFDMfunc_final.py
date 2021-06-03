@@ -180,7 +180,7 @@ def ofdm_gen_BER(snrDB, K_rice, channel_len, params):
         yield batch_x, batch_y
 
 
-def evaluate_model(model, snrDB_list, Krice, channel_len, params):
+def evaluate_model(model, params, snrDB_list, Krice, channel_len):
     BER_list = []
     for snrDB in tqdm(snrDB_list):
         X_BER, y_BER = next(ofdm_gen_BER(snrDB, Krice, channel_len, params))
