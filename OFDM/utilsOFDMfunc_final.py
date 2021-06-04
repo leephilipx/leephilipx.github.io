@@ -128,19 +128,18 @@ def ofdm_gen(snrDB, H_type, params, channel_response_set_train, channel_response
 
 ### =================== DL Functions ================ ###
 
-
+def bit_err(y_true, y_pred):
+    err = 1 - tf.reduce_mean(
+        tf.reduce_mean(
+            tf.cast(
+                tf.equal(tf.sign(y_pred - 0.5),
+                        tf.cast(tf.sign(y_true - 0.5), tf.float32)),
+                dtype=tf.float32)
+        ))
+    return err
 
 def instantiate_DL_model(params, verbose=True, stack_output_shape=2**3):
     if verbose: print('Instantiating deep learning model \'channel_estimation_stack\'')
-    def bit_err(y_true, y_pred):
-        err = 1 - tf.reduce_mean(
-            tf.reduce_mean(
-                tf.cast(
-                    tf.equal(tf.sign(y_pred - 0.5),
-                            tf.cast(tf.sign(y_true - 0.5), tf.float32)),
-                    dtype=tf.float32)
-            ))
-        return err
     def serial_stack(input_bits, stack_output_shape, stack_no):
         x = tf.keras.layers.Dense(128, activation='relu', name=f'dense_{stack_no}_1')(input_bits)  
         x = tf.keras.layers.Dense(64, activation='relu', name=f'dense_{stack_no}_2')(x)
@@ -155,6 +154,16 @@ def instantiate_DL_model(params, verbose=True, stack_output_shape=2**3):
     if verbose: print(f'>> Each stack predicts {stack_output_shape} bits, with a total of {stack_count} stacks predicting {params["n_bits_out"]} total bits!')
     return model
 
+def instantiate_DL_model_old(params, verbose=True):
+    if verbose: print('Instantiating deep learning model \'channel_estimation_old\'')
+    input_bits = tf.keras.layers.Input(shape=(params['n_bits']*2, ), name='input_old')
+    x = tf.keras.layers.Dense(500, activation='relu', name='dense_old_1')(input_bits)
+    x = tf.keras.layers.Dense(250, activation='relu', name='dense_old_2')(x)
+    x = tf.keras.layers.Dense(120, activation='relu', name='dense_old_3')(x)
+    output_signal = tf.keras.layers.Dense(params['n_bits_out'], activation='sigmoid', name='dense_old_out')(x)
+    model = tf.keras.Model(input_bits, output_signal, name='channel_estimation_old')
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=[bit_err])
+    return model
 
 def instantiate_callbacks(temp_path='./temp_checkpoint.h5', initial_learning_rate=0.01, epochs=5):
     def lr_time_based_decay(epoch, lr):
@@ -163,7 +172,6 @@ def instantiate_callbacks(temp_path='./temp_checkpoint.h5', initial_learning_rat
     lrs = tf.keras.callbacks.LearningRateScheduler(lr_time_based_decay, verbose=0)
     checkpoint = tf.keras.callbacks.ModelCheckpoint(temp_path, monitor='val_bit_err', verbose=0, save_best_only=True, mode='min', save_weights_only=False)
     return lrs, checkpoint
-
 
 def ofdm_gen_BER(snrDB, K_rice, channel_len, params):
     while (True):
@@ -178,7 +186,6 @@ def ofdm_gen_BER(snrDB, K_rice, channel_len, params):
         batch_x = np.asarray(input_samples)
         batch_y = np.asarray(input_labels)
         yield batch_x, batch_y
-
 
 def evaluate_model(model, params, snrDB_list, Krice, channel_len):
     BER_list = []
