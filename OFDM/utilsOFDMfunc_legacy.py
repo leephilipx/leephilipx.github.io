@@ -155,6 +155,15 @@ def receiver_LMMSE(y_s, fft_remainder, demapping_table, pilotData, noise_var_1D,
     return Rx_lmmse
  
 
+def generate_rician_channel(K_rice, channel_len):
+    channel_taps = channel_len
+    fade_var_1D = 1
+    K = 10 ** (K_rice/10)
+    pdp = np.exp(np.arange(-0.5, -0.5-channel_len*0.5, -0.5))  # Power Delay Profile (PDP)
+    pdp = pdp / np.sum(pdp)
+    H_ray = np.sqrt(1/2) * ( np.random.randn(channel_taps) + 1j*np.random.randn(channel_taps) )
+    H_ric = pdp/np.sqrt(2) * ( np.sqrt(K/(K+1)) + np.sqrt(1/(K+1)) * H_ray ) * fade_var_1D;
+    return H_ric / np.linalg.norm(H_ric)   # Must normalise so that total power is unity
 
 def ofdm_gen_BER_2(snrDB, K_rice, channel_len, params):
     while (True):
