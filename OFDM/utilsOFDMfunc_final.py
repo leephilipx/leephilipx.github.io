@@ -194,3 +194,17 @@ def evaluate_model(model, params, snrDB_list, Krice, channel_len):
         preds_BER = np.round(model.predict(X_BER)).astype(int)
         BER_list.append(np.mean(np.abs(y_BER - preds_BER)))
     return np.array(BER_list)
+    
+ def ofdm_gen_single(snrDB, K_rice, channel_len, params):
+    while (True):
+        input_samples = []
+        input_labels = []
+        for _ in range(1):
+            channel_response = generate_rician_channel(K_rice, channel_len)
+            bits = np.random.binomial(n=1, p=0.5, size=(params['n_bits'], ))
+            signal_output = ofdm_simulate(bits, params['pilotSymbols'], snrDB, channel_response, params)  
+            input_labels.append(bits[:params['n_bits_out']])
+            input_samples.append(signal_output)
+        batch_x = np.asarray(input_samples)
+        batch_y = np.asarray(input_labels)
+        yield batch_x, batch_y
