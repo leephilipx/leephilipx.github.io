@@ -153,3 +153,19 @@ def receiver_LMMSE(y_s, fft_remainder, demapping_table, pilotData, noise_var_1D,
     X_hat_lmmse = LMMSE_estimate(Y_blocks, pilotData, n_fft, channel_length, noise_var_1D, fade_var_1D)
     Rx_lmmse, X_blocks_lmmse = demodulate(X_hat_lmmse, demapping_table, len(pilotData[2]), fft_remainder)
     return Rx_lmmse
+ 
+
+
+def ofdm_gen_BER_2(snrDB, K_rice, channel_len, params):
+    while (True):
+        input_samples = []
+        input_labels = []
+        for _ in range(1):
+            channel_response = generate_rician_channel(K_rice, channel_len)
+            bits = np.random.binomial(n=1, p=0.5, size=(params['n_bits'], ))
+            signal_output = ofdm_simulate(bits, params['pilotSymbols'], snrDB, channel_response, params)  
+            input_labels.append(bits[:params['n_bits_out']])
+            input_samples.append(signal_output)
+        batch_x = np.asarray(input_samples)
+        batch_y = np.asarray(input_labels)
+        yield batch_x, batch_y
