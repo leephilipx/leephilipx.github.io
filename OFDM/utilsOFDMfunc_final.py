@@ -194,8 +194,9 @@ def evaluate_model(model, params, snrDB_list, Krice, channel_len):
         preds_BER = np.round(model.predict(X_BER)).astype(int)
         BER_list.append(np.mean(np.abs(y_BER - preds_BER)))
     return np.array(BER_list)
-    
- def ofdm_gen_single(snrDB, K_rice, channel_len, params):
+
+
+def ofdm_gen_single(snrDB, K_rice, channel_len, params):
     while (True):
         input_samples = []
         input_labels = []
