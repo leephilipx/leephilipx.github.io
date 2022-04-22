@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <noscript>Please enable JavaScript on your browser.</noscript>
+      <style>
+      #fontLayout {background-color: #282A35;padding: 10px;color: #ffffff;border-radius: 0px;}#fontLayout .fontwindow {background-color: #ffffff;padding: 10px;color: #000000;}#fontLayout .fontprecontainer {background-color: #E7E9EB;padding: 10px;font-size: 120%;font-family: Consolas,"Courier New", Courier, monospace;}#fontLayout .fontprecontainer table, tr {width: 100%;}#fontLayout .fontprecontainer input {font-family:Cambria;padding: 3px;border: 1px solid #282A35;height: 1.5em;width: 100%;border-radius:0;}.button {background-color: #282A35;border: none;color: white;padding: 3px;font-size: 1.25em;height: 1.5em;text-align: center;text-decoration: none;display: inline-block;}.btn-default {color: #333;background-color: #fff;border-color: #ccc;}.btn {display: inline-block;margin-bottom: 0;font-weight: 400;text-align: center;white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;background-image: none;border: 1px solid transparent;padding: 6px 12px;font-size: 14px;line-height: 1.42857143;border-radius: 0;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}.btn-default:hover {color: #333;background-color: #e6e6e6;border-color: #adadad;}
+      </style>
+      <div id="fontLayout" autocomplete="off">
+         <h2>Alphanumerical Conversion Tool</h2>
+         <h4>Note: Only Alphanumerical value(s) <i>[A-z0-9]</i> shall be converted. <u>(Characters which have no counterparts shall either be replaced by its upper/lower case counterpart or left unchanged).</u></h4>
+         <div class="fontwindow">
+            <div class="fontprecontainer">
+               <table>
+                  <tr><th colspan="3" align="left">Superscript</th></tr>
+                  <tr><td width="45%"><input id="superscriptPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="superscriptResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToSuperscript" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="superscriptResult">Copy Output</button>&nbsp;<small></small></tr>
+
+                  <tr><th colspan="3" align="left">Subscript</th></tr>
+                  <tr><td width="45%"><input id="subscriptPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="subscriptResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToSubscript" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="subscriptResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Capital Letters Mid-line</th></tr>
+                  <tr><td width="45%"><input id="midCapitalPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="midCapitalResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToMidCapital" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="midCapitalResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Bold Type I</th></tr>
+                  <tr><td width="45%"><input id="boldTypeIPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="boldTypeIResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToBoldTypeI" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="boldTypeIResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Bold Type II</th></tr>
+                  <tr><td width="45%"><input id="boldTypeIIPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="boldTypeIIResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToBoldTypeII" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="boldTypeIIResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Italic</th></tr>
+                  <tr><td width="45%"><input id="italicPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="italicResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToItalic" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="italicResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Bold Italic</th></tr>
+                  <tr><td width="45%"><input id="boldItalicPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="boldItalicResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToBoldItalic" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="boldItalicResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Script</th></tr>
+                  <tr><td width="45%"><input id="scriptPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="scriptResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToScript" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="scriptResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Bold Script</th></tr>
+                  <tr><td width="45%"><input id="boldScriptPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="boldScriptResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToBoldScript" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="boldScriptResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Monospace</th></tr>
+                  <tr><td width="45%"><input id="monospacePlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="monospaceResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToMonospace" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="monospaceResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Strikethrough</th></tr>
+                  <tr><td width="45%"><input id="strikethroughPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="strikethroughResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToStrikethrough" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="strikethroughResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+
+                  <tr><th colspan="3" align="left">Underline</th></tr>
+                  <tr><td width="45%"><input id="underlinePlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="underlineResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToUnderline" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="underlineResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+
+
+                  <tr><th colspan="3" align="left">Old Style English Alphabet</th></tr>
+                  <tr><td width="45%"><input id="oldStyleEngAlphaPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="oldStyleEngAlphaResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToOldStyleEngAlpha" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="oldStyleEngAlphaResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+                  <tr><th colspan="3" align="left">Runic Style English Alphabet</th></tr>
+                  <tr><td width="45%"><input id="runicStyleEngAlphaPlainText" type="text" value="Hello world" /></td><td width="5%" align="center">➝</td><td width="45%"><input id="runicStyleEngAlphaResult" type="text" disabled /></td></tr>
+                  <tr><td align="left"><button id="convertToRunicStyleEngAlpha" type="button" class="btn btn-default">Convert</button>&nbsp;<button class="btn btn-default copyTransformedOutputBtn" value="runicStyleEngAlphaResult">Copy Output</button>&nbsp;<small></small></td></tr>
+
+               </table>
+            </div>
+            <h3>List of Reference(s)</h3>
+            <p>
+               <a href="https://unicode-table.com/en/sets/" target="_blank">Unicode Table</a><br>
+               <a href="https://public.tableau.com/views/Unicodesymbols/Story1?:embed=y&:showVizHome=no&:display_count=y&:display_static_image=y&:bootstrapWhenNotified=true" target="_blank">Unicode Symbols in Tableau</a><br>
+               <a href="https://www.fancyfonts.top/linkedin-fonts.html" target="_blank">LinkedIn Font Generator</a>
+            </p>
+         </div>
+      </div>
+      <script>
+      /*
+      window.addEventListener("beforeunload", (event) => {
+        event.preventDefault()
+        event.returnValue = ""
+      });
+      */
+
+      var charMapperSuperscript={"a":"ᵃ","A":"ᴬ","b":"ᵇ","B":"ᴮ","c":"ᶜ","C":"ᶜ","d":"ᵈ","D":"ᴰ","e":"ᵉ","E":"ᴱ","f":"ᶠ","F":"ᶠ","g":"ᵍ","G":"ᴳ","h":"ʰ","H":"ᵸ","i":"ⁱ","I":"ᴵ","j":"ʲ","J":"ᴶ","k":"ᵏ","K":"ᴷ","l":"ˡ","L":"ᴸ","m":"ᵐ","M":"ᴹ","n":"ⁿ","N":"ᴺ","o":"ᵒ","O":"ᴼ","p":"ᵖ","P":"ᴾ","q":"૧","Q":"૧","r":"ʳ","R":"ᴿ","s":"ˢ","S":"ˢ","t":"ᵗ","T":"ᵀ","u":"ᵘ","U":"ᵁ","v":"ᵛ","V":"ⱽ","w":"ʷ","W":"ᵂ","x":"ˣ","X":"ᵡ","y":"ʸ","Y":"ᵞ","z":"ᶻ","Z":"ᶾ",")":"⁾","(":"⁽","=":"⁼","-":"⁻","+":"⁺","×":"ˣ","0":"⁰","1":"¹","2":"²","3":"³","4":"⁴","5":"⁵","6":"⁶","7":"⁷","8":"⁸","9":"⁹"};
+
+      var charMapperSubscript={"a":"ₐ","A":"🇦","b":"ᵦ","B":"🇧","c":"𝒸","C":"🇨","d":"𝒹","D":"🇩","e":"ₑ","E":"🇪","f":"𝒻","F":"🇫","G":"🇬","h":"ₕ","H":"🇭","i":"ᵢ","I":"🇮","j":"ⱼ","J":"🇯","k":"ₖ","K":"🇰","l":"ₗ","L":"🇱","m":"ₘ","M":"🇲","n":"ₙ","N":"🇳","o":"ₒ","O":"🇴","p":"ₚ","P":"🇵","q":"ჹ","Q":"🇶","r":"ᵣ","R":"🇷","s":"ₛ","S":"🇸","t":"ₜ","T":"🇹","u":"ᵤ","U":"🇺","v":"ᵥ","V":"🇻","w":"ω","W":"🇼","x":"ₓ","X":"🇽","y":"ᵧ","Y":"🇾","z":"𝓏","Z":"🇿",")":"₎","(":"₍","=":"₌","-":"₋","+":"₊","×":"ₓ","0":"₀","1":"₁","2":"₂","3":"₃","4":"₄","5":"₅","6":"₆","7":"₇","8":"₈","9":"₉"};
+
+      var charMapperMidCapital={"a":"ᴀ","A":"ᴀ","b":"ᴃ","B":"ᴃ","c":"ᴄ","C":"ᴄ","d":"ᴅ","D":"ᴅ","e":"ᴇ","E":"ᴇ","f":"ғ","F":"ғ","g":"ɢ","G":"ɢ","h":"ʜ","H":"ʜ","i":"ɪ","I":"ɪ","j":"ᴊ","J":"ᴊ","k":"ᴋ","K":"ᴋ","l":"ʟ","L":"ʟ","m":"ᴍ","M":"ᴍ","n":"ɴ","N":"ɴ","o":"ᴏ","O":"ᴏ","p":"ᴘ","P":"ᴘ","q":"ɋ","Q":"Q","r":"ʀ","R":"ʀ","s":"s","S":"s","t":"ᴛ","T":"ᴛ","u":"ᴜ","U":"ᴜ","v":"ᴠ","V":"ᴠ","w":"ᴡ","W":"ᴡ","x":"x","X":"x","y":"ʏ","Y":"ʏ","z":"ᴢ","Z":"ᴢ"};
+
+      var charMapperOldStyleEngAlpha={"a":"𝖆","b":"𝖇","c":"𝖈","d":"𝖉","e":"𝖊","f":"𝖋","g":"𝖌","h":"𝖍","i":"𝖎","j":"𝖏","k":"𝖐","l":"𝖑","m":"𝖒","n":"𝖓","o":"𝖔","p":"𝖕","q":"𝖖","r":"𝖗","s":"𝖘","t":"𝖙","u":"𝖚","v":"𝖛","w":"𝖜","x":"𝖝","y":"𝖞","z":"𝖟","A":"𝕬","B":"𝕭","C":"𝕮","D":"𝕯","E":"𝕰","F":"𝕱","G":"𝕲","H":"𝕳","I":"𝕴","J":"𝕵","K":"𝕶","L":"𝕷","M":"𝕸","N":"𝕹","O":"𝕺","P":"𝕻","Q":"𝕼","R":"𝕽","S":"𝕾","T":"𝕿","U":"𝖀","V":"𝖁","W":"𝖂","X":"𝖃","Y":"𝖄","Z":"𝖅"};
+
+      var charMapperRunicStyleEngAlpha={"a":"ꋫ","b":"ꃃ","c":"ꏸ","d":"ꁕ","e":"ꍟ","f":"ꄘ","g":"ꁍ","h":"ꑛ","i":"ꂑ","j":"ꀭ","k":"ꀗ","l":"꒒","m":"ꁒ","n":"ꁹ","o":"ꆂ","p":"ꉣ","q":"ꁸ","r":"꒓","s":"ꌚ","t":"꓅","u":"ꐇ","v":"ꏝ","w":"ꅐ","x":"ꇓ","y":"ꐟ","z":"ꁴ","A":"ꋫ","B":"ꃃ","C":"ꏸ","D":"ꁕ","E":"ꍟ","F":"ꄘ","G":"ꁍ","H":"ꑛ","I":"ꂑ","J":"ꀭ","K":"ꀗ","L":"꒒","M":"ꁒ","N":"ꁹ","O":"ꆂ","P":"ꉣ","Q":"ꁸ","R":"꒓","S":"ꌚ","T":"꓅","U":"ꐇ","V":"ꏝ","W":"ꅐ","X":"ꇓ","Y":"ꐟ","Z":"ꁴ"};
+
+      var charMapperScript={"a":"𝒶","A":"𝒜","b":"𝒷","B":"𝐵","c":"𝒸","C":"𝒞","d":"𝒹","D":"𝒟","e":"𝑒","E":"𝐸","f":"𝒻","F":"𝐹","g":"𝑔","G":"𝒢","h":"𝒽","H":"𝐻","i":"𝒾","I":"𝐼","j":"𝒿","J":"𝒥","k":"𝓀","K":"𝒦","l":"𝓁","L":"𝐿","m":"𝓂","M":"𝑀","n":"𝓃","N":"𝒩","o":"𝑜","O":"𝒪","p":"𝓅","P":"𝒫","q":"𝓆","Q":"𝒬","r":"𝓇","R":"𝑅","s":"𝓈","S":"𝒮","t":"𝓉","T":"𝒯","u":"𝓊","U":"𝒰","v":"𝓋","V":"𝒱","w":"𝓌","W":"𝒲","x":"𝓍","X":"𝒳","y":"𝓎","Y":"𝒴","z":"𝓏","Z":"𝒵",")":")","(":"(","=":"=","-":"-","+":"+","×":"×","0":"0","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9"};
+
+      var charMapperBoldScript={"a":"𝓪","A":"𝓐","b":"𝓫","B":"𝓑","c":"𝓬","C":"𝓒","d":"𝓭","D":"𝓓","e":"𝓮","E":"𝓔","f":"𝓯","F":"𝓕","g":"𝓰","G":"𝓖","h":"𝓱","H":"𝓗","i":"𝓲","I":"𝓘","j":"𝓳","J":"𝓙","k":"𝓴","K":"𝓚","l":"𝓵","L":"𝓛","m":"𝓶","M":"𝓜","n":"𝓷","N":"𝓝","o":"𝓸","O":"𝓞","p":"𝓹","P":"𝓟","q":"𝓺","Q":"𝓠","r":"𝓻","R":"𝓡","s":"𝓼","S":"𝓢","t":"𝓽","T":"𝓣","u":"𝓾","U":"𝓤","v":"𝓿","V":"𝓥","w":"𝔀","W":"𝓦","x":"𝔁","X":"𝓧","y":"𝔂","Y":"𝓨","z":"𝔃","Z":"𝓩",")":")","(":"(","=":"=","-":"-","+":"+","×":"×","0":"0","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9"};
+
+      var charMapperBoldTypeI={"a":"𝐚","A":"𝐀","b":"𝐛","B":"𝐁","c":"𝐜","C":"𝐂","d":"𝐝","D":"𝐃","e":"𝐞","E":"𝐄","f":"𝐟","F":"𝐅","g":"𝐠","G":"𝐆","h":"𝐡","H":"𝐇","i":"𝐢","I":"𝐈","j":"𝐣","J":"𝐉","k":"𝐤","K":"𝐊","l":"𝐥","L":"𝐋","m":"𝐦","M":"𝐌","n":"𝐧","N":"𝐍","o":"𝐨","O":"𝐎","p":"𝐩","P":"𝐏","q":"𝐪","Q":"𝐐","r":"𝐫","R":"𝐑","s":"𝐬","S":"𝐒","t":"𝐭","T":"𝐓","u":"𝐮","U":"𝐔","v":"𝐯","V":"𝐕","w":"𝐰","W":"𝐖","x":"𝐱","X":"𝐗","y":"𝐲","Y":"𝐘","z":"𝐳","Z":"𝐙",")":")","(":"(","=":"=","-":"-","+":"+","×":"×","0":"𝟎","1":"𝟏","2":"𝟐","3":"𝟑","4":"𝟒","5":"𝟓","6":"𝟔","7":"𝟕","8":"𝟖","9":"𝟗"};
+
+      var charMapperBoldTypeII={"a":"𝗮","A":"𝗔","b":"𝗯","B":"𝗕","c":"𝗰","C":"𝗖","d":"𝗱","D":"𝗗","e":"𝗲","E":"𝗘","f":"𝗳","F":"𝗙","g":"𝗴","G":"𝗚","h":"𝗵","H":"𝗛","i":"𝗶","I":"𝗜","j":"𝗷","J":"𝗝","k":"𝗸","K":"𝗞","l":"𝗹","L":"𝗟","m":"𝗺","M":"𝗠","n":"𝗻","N":"𝗡","o":"𝗼","O":"𝗢","p":"𝗽","P":"𝗣","q":"𝗾","Q":"𝗤","r":"𝗿","R":"𝗥","s":"𝘀","S":"𝗦","t":"𝘁","T":"𝗧","u":"𝘂","U":"𝗨","v":"𝘃","V":"𝗩","w":"𝘄","W":"𝗪","x":"𝘅","X":"𝗫","y":"𝘆","Y":"𝗬","z":"𝘇","Z":"𝗭",")":")","(":"(","=":"=","-":"-","+":"+","×":"×","0":"𝟬","1":"𝟭","2":"𝟮","3":"𝟯","4":"𝟰","5":"𝟱","6":"𝟲","7":"𝟳","8":"𝟴","9":"𝟵"};
+
+      var charMapperItalic={"a":"𝘢","A":"𝘈","b":"𝘣","B":"𝘉","c":"𝘤","C":"𝘊","d":"𝘥","D":"𝘋","e":"𝘦","E":"𝘌","f":"𝘧","F":"𝘍","g":"𝘨","G":"𝘎","h":"𝘩","H":"𝘏","i":"𝘪","I":"𝘐","j":"𝘫","J":"𝘑","k":"𝘬","K":"𝘒","l":"𝘭","L":"𝘓","m":"𝘮","M":"𝘔","n":"𝘯","N":"𝘕","o":"𝘰","O":"𝘖","p":"𝘱","P":"𝘗","q":"𝘲","Q":"𝘘","r":"𝘳","R":"𝘙","s":"𝘴","S":"𝘚","t":"𝘵","T":"𝘛","u":"𝘶","U":"𝘜","v":"𝘷","V":"𝘝","w":"𝘸","W":"𝘞","x":"𝘹","X":"𝘟","y":"𝘺","Y":"𝘠","z":"𝘻","Z":"𝘡",")":")","(":"(","=":"=","-":"-","+":"+","×":"×","0":"0","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9"};
+
+      var charMapperBoldItalic={"a":"𝙖","A":"𝘼","b":"𝙗","B":"𝘽","c":"𝙘","C":"𝘾","d":"𝙙","D":"𝘿","e":"𝙚","E":"𝙀","f":"𝙛","F":"𝙁","g":"𝙜","G":"𝙂","h":"𝘩","H":"𝙃","i":"𝙞","I":"𝙄","j":"𝙟","J":"𝙅","k":"𝙠","K":"𝙆","l":"𝙡","L":"𝙇","m":"𝙢","M":"𝙈","n":"𝙣","N":"𝙉","o":"𝙤","O":"𝙊","p":"𝙥","P":"𝙋","q":"𝙦","Q":"𝙌","r":"𝙧","R":"𝙍","s":"𝙨","S":"𝙎","t":"𝙩","T":"𝙏","u":"𝙪","U":"𝙐","v":"𝙫","V":"𝙑","w":"𝙬","W":"𝙒","x":"𝙭","X":"𝙓","y":"𝙮","Y":"𝙔","z":"𝙯","Z":"𝙕",")":")","(":"(","=":"=","-":"-","+":"+","×":"×","0":"0","1":"1","2":"2","3":"3","4":"4","5":"5","6":"6","7":"7","8":"8","9":"9"};
+
+      var charMapperMonospace={"a":"𝚊","A":"𝙰","b":"𝚋","B":"𝙱","c":"𝚌","C":"𝙲","d":"𝚍","D":"𝙳","e":"𝚎","E":"𝙴","f":"𝚏","F":"𝙵","g":"𝚐","G":"𝙶","h":"𝚑","H":"𝙷","i":"𝚒","I":"𝙸","j":"𝚓","J":"𝙹","k":"𝚔","K":"𝙺","l":"𝚕","L":"𝙻","m":"𝚖","M":"𝙼","n":"𝚗","N":"𝙽","o":"𝚘","O":"𝙾","p":"𝚙","P":"𝙿","q":"𝚚","Q":"𝚀","r":"𝚛","R":"𝚁","s":"𝚜","S":"𝚂","t":"𝚝","T":"𝚃","u":"𝚞","U":"𝚄","v":"𝚟","V":"𝚅","w":"𝚠","W":"𝚆","x":"𝚡","X":"𝚇","y":"𝚢","Y":"𝚈","z":"𝚣","Z":"𝚉",")":")","(":"(","=":"=","-":"-","+":"+","×":"×","0":"𝟶","1":"𝟷","2":"𝟸","3":"𝟹","4":"𝟺","5":"𝟻","6":"𝟼","7":"𝟽","8":"𝟾","9":"𝟿"};
+
+      var charMapperStrikethrough={"a":"a̶","A":"A̶","b":"b̶","B":"B̶","c":"c̶","C":"C̶","d":"d̶","D":"D̶","e":"e̶","E":"E̶","f":"f̶","F":"F̶","g":"g̶","G":"G̶","h":"h̶","H":"H̶","i":"i̶","I":"I̶","j":"j̶","J":"J̶","k":"k̶","K":"K̶","l":"l̶","L":"L̶","m":"m̶","M":"M̶","n":"n̶","N":"N̶","o":"o̶","O":"O̶","p":"p̶","P":"P̶","q":"q̶","Q":"Q̶","r":"r̶","R":"R̶","s":"s̶","S":"S̶","t":"t̶","T":"T̶","u":"u̶","U":"U̶","v":"v̶","V":"V̶","w":"w̶","W":"W̶","x":"x̶","X":"X̶","y":"y̶","Y":"Y̶","z":"z̶","Z":"Z̶",")":")","(":"(","=":"=","-":"-","+":"+","×":"×","0":"0̶","1":"1̶","2":"2̶","3":"3̶","4":"4̶","5":"5̶","6":"6̶","7":"7̶","8":"8̶","9":"9̶"};
+
+      var charMapperUnderline={"a":"a̲","A":"A̲","b":"b̲","B":"B̲","c":"c̲","C":"C̲","d":"d̲","D":"D̲","e":"e̲","E":"E̲","f":"f̲","F":"F̲","g":"g̲","G":"G̲","h":"h̲","H":"H̲","i":"i̲","I":"I̲","j":"j̲","J":"J̲","k":"k̲","K":"K̲","l":"l̲","L":"L̲","m":"m̲","M":"M̲","n":"n̲","N":"N̲","o":"o̲","O":"O̲","p":"p̲","P":"P̲","q":"q̲","Q":"Q̲","r":"r̲","R":"R̲","s":"s̲","S":"S̲","t":"t̲","T":"T̲","u":"u̲","U":"U̲","v":"v̲","V":"V̲","w":"w̲","W":"W̲","x":"x̲","X":"X̲","y":"y̲","Y":"Y̲","z":"z̲","Z":"Z̲",")":")","(":"(","=":"=","-":"-","+":"+","×":"×","0":"0̲","1":"1̲","2":"2̲","3":"3̲","4":"4̲","5":"5̲","6":"6̲","7":"7̲","8":"8̲","9":"9̲"};
+
+      window.onload = function() {
+         function replaceAll(input,old_text,new_text) {
+             input=input.split(old_text)
+             input=input.join(new_text)
+
+             return input;
+         }
+         var superscriptPlainTextEle=document.getElementById("superscriptPlainText");
+         var superscriptEle=document.getElementById("superscriptResult");
+
+         var subscriptPlainTextEle=document.getElementById("subscriptPlainText");
+         var subscriptEle=document.getElementById("subscriptResult");
+         
+         var midCapitalPlainTextEle=document.getElementById("midCapitalPlainText");
+         var midCapitalEle=document.getElementById("midCapitalResult");
+
+         var boldTypeIPlainTextEle=document.getElementById("boldTypeIPlainText");
+         var boldTypeIEle=document.getElementById("boldTypeIResult");
+
+         var boldTypeIIPlainTextEle=document.getElementById("boldTypeIIPlainText");
+         var boldTypeIIEle=document.getElementById("boldTypeIIResult");
+
+         var italicPlainTextEle=document.getElementById("italicPlainText");
+         var italicEle=document.getElementById("italicResult");
+
+         var boldItalicPlainTextEle=document.getElementById("boldItalicPlainText");
+         var boldItalicEle=document.getElementById("boldItalicResult");
+
+         var scriptPlainTextEle=document.getElementById("scriptPlainText");
+         var scriptEle=document.getElementById("scriptResult");
+
+         var boldScriptPlainTextEle=document.getElementById("boldScriptPlainText");
+         var boldScriptEle=document.getElementById("boldScriptResult");
+
+         var monospacePlainTextEle=document.getElementById("monospacePlainText");
+         var monospaceEle=document.getElementById("monospaceResult");
+
+         var strikethroughPlainTextEle=document.getElementById("strikethroughPlainText");
+         var strikethroughEle=document.getElementById("strikethroughResult");
+
+         var underlinePlainTextEle=document.getElementById("underlinePlainText");
+         var underlineEle=document.getElementById("underlineResult");
+
+         var oldStyleEngAlphaPlainTextEle=document.getElementById("oldStyleEngAlphaPlainText");
+         var oldStyleEngAlphaEle=document.getElementById("oldStyleEngAlphaResult");
+
+         var runicStyleEngAlphaPlainTextEle=document.getElementById("runicStyleEngAlphaPlainText");
+         var runicStyleEngAlphaEle=document.getElementById("runicStyleEngAlphaResult");
+
+         function convert(plainTextEle,typeEle,charMapper) {
+            let plainText=plainTextEle.value;
+            let finalResult="";
+            for(let sIndex=0;sIndex<plainText.length;sIndex++) {
+               let toReplaceChar=plainText.charAt(sIndex);
+               let replacedChar=charMapper[toReplaceChar];
+               if(typeof replacedChar == "undefined") {
+                  replacedChar=toReplaceChar;
+               }
+               finalResult+=replacedChar;
+            }
+            typeEle.value=finalResult;
+         }
+         convert(superscriptPlainTextEle,superscriptEle,charMapperSuperscript);
+         
+         convert(subscriptPlainTextEle,subscriptEle,charMapperSubscript);
+
+         convert(midCapitalPlainTextEle,midCapitalEle,charMapperMidCapital);
+
+         convert(boldTypeIPlainTextEle,boldTypeIEle,charMapperBoldTypeI);
+
+         convert(boldTypeIIPlainTextEle,boldTypeIIEle,charMapperBoldTypeII);
+
+         convert(italicPlainTextEle,italicEle,charMapperItalic);
+
+         convert(boldItalicPlainTextEle,boldItalicEle,charMapperBoldItalic);
+
+         convert(scriptPlainTextEle,scriptEle,charMapperScript);
+
+         convert(boldScriptPlainTextEle,boldScriptEle,charMapperBoldScript);
+
+         convert(monospacePlainTextEle,monospaceEle,charMapperMonospace);
+
+         convert(strikethroughPlainTextEle,strikethroughEle,charMapperStrikethrough);
+
+         convert(underlinePlainTextEle,underlineEle,charMapperUnderline);
+
+         convert(oldStyleEngAlphaPlainTextEle,oldStyleEngAlphaEle,charMapperOldStyleEngAlpha);
+
+         convert(runicStyleEngAlphaPlainTextEle,runicStyleEngAlphaEle,charMapperRunicStyleEngAlpha);
+
+         document.getElementById("convertToSuperscript").onclick = function(e) {
+            convert(superscriptPlainTextEle,superscriptEle,charMapperSuperscript);
+         };
+         
+         document.getElementById("convertToSubscript").onclick = function(e) {
+            convert(subscriptPlainTextEle,subscriptEle,charMapperSubscript);
+         };
+
+         document.getElementById("convertToMidCapital").onclick = function(e) {
+            convert(midCapitalPlainTextEle,midCapitalEle,charMapperMidCapital);
+         };
+
+         document.getElementById("convertToItalic").onclick = function(e) {
+            convert(italicPlainTextEle,italicEle,charMapperItalic);
+         };
+
+         document.getElementById("convertToBoldItalic").onclick = function(e) {
+            convert(boldItalicPlainTextEle,boldItalicEle,charMapperBoldItalic);
+         };
+
+         document.getElementById("convertToBoldTypeI").onclick = function(e) {
+            convert(boldTypeIPlainTextEle,boldTypeIEle,charMapperBoldTypeI);
+         };
+
+         document.getElementById("convertToBoldTypeII").onclick = function(e) {
+            convert(boldTypeIIPlainTextEle,boldTypeIIEle,charMapperBoldTypeII);
+         };
+
+         document.getElementById("convertToScript").onclick = function(e) {
+            convert(scriptPlainTextEle,scriptEle,charMapperScript);
+         };
+
+         document.getElementById("convertToBoldScript").onclick = function(e) {
+            convert(boldScriptPlainTextEle,boldScriptEle,charMapperBoldScript);
+         };
+
+         document.getElementById("convertToMonospace").onclick = function(e) {
+            convert(monospacePlainTextEle,monospaceEle,charMapperMonospace);
+         };
+
+         document.getElementById("convertToStrikethrough").onclick = function(e) {
+            convert(strikethroughPlainTextEle,strikethroughEle,charMapperStrikethrough);
+         };
+
+         document.getElementById("convertToUnderline").onclick = function(e) {
+            convert(underlinePlainTextEle,underlineEle,charMapperUnderline);
+         };
+
+         document.getElementById("convertToOldStyleEngAlpha").onclick = function(e) {
+            convert(oldStyleEngAlphaPlainTextEle,oldStyleEngAlphaEle,charMapperOldStyleEngAlpha);
+         };
+
+         document.getElementById("convertToRunicStyleEngAlpha").onclick = function(e) {
+            convert(runicStyleEngAlphaPlainTextEle,runicStyleEngAlphaEle,charMapperRunicStyleEngAlpha);
+         };
+
+         function copyTransformedOutput(inputEleId) {
+           var copyText = document.getElementById(inputEleId);
+           copyText.select();
+           copyText.setSelectionRange(0, 99999); /* For mobile devices */
+           navigator.clipboard.writeText(copyText.value);
+         }
+
+         var copyBtns=document.getElementsByClassName("copyTransformedOutputBtn");
+
+         
+         for(var btnIndex=0;btnIndex<copyBtns.length;btnIndex++) {
+            copyBtns[btnIndex].onclick=function(evt) {
+               for(var btnIndex2=0;btnIndex2<copyBtns.length;btnIndex2++) {
+                  copyBtns[btnIndex2].nextElementSibling.innerHTML="";
+               }
+               var inputEleId=evt.srcElement.value;
+               copyTransformedOutput(inputEleId);
+               var smallEle=evt.currentTarget.nextElementSibling;
+               smallEle.innerHTML="<span style='color:green'>Copied to Clipboard!</span>";
+            }
+         }
+      };
+      </script>
+   </body>
+</html>
