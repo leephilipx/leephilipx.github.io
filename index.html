@@ -1,87 +1,606 @@
 <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>GitHub.io - Philip Lee</title>
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/plhy_icon.png" type="image/x-icon">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./index_files/w3.css">
-<link rel="stylesheet" href="./index_files/w3-theme-teal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!--=============== BOXICONS ===============-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-<!-- Custom styles -->
-<style type="text/css">
-	.container::-webkit-scrollbar { display:none;  /* Safari and Chrome */ }
-	.pl-mono { font-family: monospace; font-size: 90%; }
-	.pl-pad { background-color:#A05757; color:#eee; border-radius:6px; font-size:90%; }
-	.pl-top { opacity:0.6; }
-	.pl-top:hover { opacity:0.8; }
-	.float-button { visibility:visible; position:fixed; cursor:pointer; right:10px; top:10px; font-size:200%; }
-</style>
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-</head><body data-new-gr-c-s-check-loaded="14.984.0" data-gr-ext-installed="" class="vsc-initialized">
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
 
-<!-- Float Button -->
-<div><a class="w3-text-white pl-top" href="#myHeader"><span class="w3-xlarge"><i class="fa fa-chevron-circle-up float-button"></i></span></a></div>
+        <title>Philip Lee Hann Yung</title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Philip</a>
 
-<!-- Header -->
-<header class="w3-container w3-theme w3-padding" id="myHeader">
-  </br>
-  <div class="w3-center">
-  <h4>This site is also used to store files as a web server in subdirectories</h4>
-  <h1 class="w3-xxxlarge w3-animate-bottom">WEBSITE IN DEVELOPMENT</h1>
-    <div class="w3-padding-32">
-      <button class="w3-btn w3-xlarge w3-theme-dark w3-hover-teal" onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;block&#39;" style="font-weight:600;">View GitHub / Contact Me</button>
-    </div>
-  </div>
-</header>
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class='bx bx-home-alt'></i>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class='bx bx-user'></i>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class='bx bx-code-curly'></i>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#work-exp" class="nav__link">
+                                <i class='bx bx-briefcase-alt-2'></i>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class='bx bx-library'></i>
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class='bx bx-send'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-<!-- Modal -->
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-card-4 w3-animate-top">
-      <header class="w3-container w3-theme"> 
-        <span onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;none&#39;" class="w3-button w3-display-topright">×</span>
-        <h5>Check out my GitHub repo and LinkedIn!</h5>
-      </header>
-      <div class="w3-padding"><center>
-		<img src="index_files/github-robot.png" alt="GitHub Logo" width="60%"></img>
-        <p>Click on the link to be redirected to <a class="w3-btn pl-mono" href="https://github.com/leephilipx" target="_blank">https://github.com/leephilipx</a> | 
-		<a class="w3-btn" href="https://www.linkedin.com/in/philip-lee-hann-yung-ab4503193/" target="_blank"><img src="index_files/linkedin.jpg" height="24px"></img></a></p>
-      </div></center>
-      <footer class="w3-container w3-theme">
-        <p>© Philip Lee 2020</p>
-      </footer>
-    </div>
-</div>
+                <div style="display: flex; flex-direction: row; color: hsl(0, 100%, 70%); font-weight: bold;">
+                    <i class='bx bxs-wrench'></i><i class='bx bxs-wrench'></i><i class='bx bxs-wrench'></i>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <p>This site is still in progress!</p>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <i class='bx bxs-wrench'></i><i class='bx bxs-wrench'></i><i class='bx bxs-wrench'></i>
+                </div>
 
-<!-- 2 boxes -->
-<div class="w3-row-padding w3-center w3-margin-top">
-<div class="w3-half">
-  <div class="w3-card w3-container" style="min-height:460px">
-  <h3>EE0005 Mini Project</h3><br>
-  <i class="fa fa-desktop w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>EE0005: Introduction to Data Science and Artificial Intelligence</p>
-  <p><span class="pl-pad">&nbsp;&nbsp;Project Title&nbsp;&nbsp;</span>&nbsp; Fradulent job postings</p>
-  </br>
-  <p>This is where we store the dataset so we can download it from Google Colab.</p>
-  <p>Click <a href="https://github.com/leephilipx/leephilipx.github.io" target="_blank">here</a> to view this repo on GitHub and check out the files used.</p>
-  </div>
-</div>
+                <!-- Theme change button-->
+                <i class='bx bx-moon change-theme' id="theme-button"></i>
+            </nav>
+        </header>
 
-<div class="w3-half">
-  <div class="w3-card w3-container" style="min-height:460px">
-  <h3>URECA</h3><br>
-  <i class="fa fa-exchange w3-margin-bottom w3-text-theme" style="font-size:120px"></i>
-  <p>URECA: Undergraduate Research Experience on CAmpus</p>
-  <p><span class="pl-pad">&nbsp;&nbsp;Project Title&nbsp;&nbsp;</span>&nbsp; Deep-learning based approach for orthogonal frequency-division multiplexing (OFDM) system</p>
-  </br>
-  <em><p>In progress - Aug 2020 to Sep 2021</p></em>
-  </div>
-</div>
-</div>
-</br>
+        <!--=============== MAIN ===============-->
+        <main class="main">
+            <!--=============== HOME ===============-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
 
-<!-- Footer -->
-<footer class="w3-container w3-theme-dark">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+                    <div class="home__data">
+                        <span class="home__greeting">Hello, I'm</span>
+                        <h1 class="home__name">Philip LEE Hann Yung</h1>
+                        <h3 class="home__education">Fresh Graduate @ NTU, Singapore</h3>
+                        <div class="home__buttons">
+                            <a href="#about" class="button button--ghost">About me</a>
+                        </div>
+                    </div>
 
-</body></html>
+                    <div class="home__handle">
+                        <img src="assets/img/portrait.png" alt="" class="home__img">
+                    </div>
+
+                    <div class="home__social">
+                        <a href="mailto:leephiliphy@gmail.com" target="_blank" class="home__social-link">
+                            <i class='bx bxs-envelope'></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/philip-lee-hann-yung/" target="_blank" class="home__social-link">
+                            <i class='bx bxl-linkedin-square'></i>
+                        </a>
+                        <a href="https://github.com/leephilipx/" target="_blank" class="home__social-link">
+                            <i class='bx bxl-github'></i>
+                        </a>
+                    </div>
+                    
+                    <a href="#about" class="home__scroll">
+                        <i class='bx bx-mouse home__scroll-icon'></i>
+                        <span class="home__scroll-name">Scroll Down</span>
+                    </a>
+
+                </div>
+            </section>
+            
+            <!--=============== ABOUT ===============-->
+            <section class="about section" id="about">
+                <span class="section__subtitle">My Intro</span>
+                <h2 class="section__title">About Me</h2>
+
+                <div class="about__container container grid">
+                    <img src="assets/img/blank.webp" alt="" class="about__img">
+                    <div class="about__data">
+                        <div class="about__info">
+                            <div class="about__box">
+                                <i class="bx bx-award about__icon"></i>
+                                <h3 class="about__title">Experience</h3>
+                                <span class="about__subtitle">2 years internships</span>
+                            </div>
+                            <div class="about__box">
+                                <i class="bx bx-code-block about__icon"></i>
+                                <h3 class="about__title">Completed</h3>
+                                <span class="about__subtitle">10+ projects</span>
+                            </div>
+                            <div class="about__box">
+                                <i class="bx bx-briefcase-alt about__icon"></i>
+                                <h3 class="about__title">Worked in</h3>
+                                <span class="about__subtitle">3 organizations</span>
+                            </div>
+                        </div>
+                        <p class="about__description">
+                            As a highly self-motivated individual with a passion for technology and a knack for
+                            problem-solving, I am always eager to experiment with technologies and build innovative
+                            solutions. My ability to quickly learn and adapt to new challenges enables me to thrive
+                            in evolving situations. I have also honed my skills as a proactive troubleshooter, always
+                            seeking out and addressing issues with determination, a role that I embraced during my
+                            internships and part-time work/projects. I enjoy keeping up-to-date on latest trends and
+                            technologies, positioning me at the forefront of technological  advancements in the field.
+                        </p>
+                        <a href="#contact" class="button">Contact Me</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--=============== SKILLS ===============-->
+            <section class="skills section" id="skills">
+                <span class="section__subtitle">My Abilities</span>
+                <h2 class="section__title">Technical Skill Sets</h2>
+
+                <div class="skills__container container grid">
+
+                    <!-- <div class="skills__content">
+                        <h3 class="skills__title">Frontend developer</h3>
+                        <div class="skills__box">
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">HTML</h3>
+                                        <span class="skills__level">Basic</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">CSS</h3>
+                                        <span class="skills__level">Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">HTML</h3>
+                                        <span class="skills__level">Basic</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">CSS</h3>
+                                        <span class="skills__level">Advanced</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__content">
+                        <h3 class="skills__title">Backend developer</h3>
+                        <div class="skills__box">
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Javascript</h3>
+                                        <span class="skills__level">Intermediate</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Git</h3>
+                                        <span class="skills__level">Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Javascript</h3>
+                                        <span class="skills__level">Intermediate</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Git</h3>
+                                        <span class="skills__level">Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="skills__content">
+                        <h3 class="skills__title">Deep learning</h3>
+                        <div class="skills__box">
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">PyTorch</h3>
+                                        <span class="skills__level">Advanced</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">TensorRT</h3>
+                                        <span class="skills__level">Basic</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">TensorFlow/ Keras</h3>
+                                        <span class="skills__level">Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__content">
+                        <h3 class="skills__title">Specialised domains</h3>
+                        <div class="skills__box">
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Computer Vision</h3>
+                                        <span class="skills__level">Intermediate</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Time Series Analysis</h3>
+                                        <span class="skills__level">Basic</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Natural Language Processing</h3>
+                                        <span class="skills__level">Basic/Intermediate</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!--=============== WORK ===============-->
+            <section class="work section" id="work-exp">
+                <span class="section__subtitle">My Professional Work</span>
+                <h2 class="section__title">Work Experience</h2>
+
+                <div class="work__container container grid">
+
+                    <div class="work__card">
+                        <h3 class="work__title">Data Scientist (Part-Time)</h3>
+                        <span class="work__button">
+                            See More <i class="bx bx-right-arrow-alt work__icon"></i>
+                        </span>
+                        <div class="work__modal">
+                            <div class="work__modal-content">
+                                <i class="bx bx-x work__modal-close"></i>
+                                <h3 class="work__modal-title">Data Scientist (Part-Time)</h3>
+                                <p class="work__modal-description">
+                                    Nanyang Business School
+                                </p>
+                                <ul class="work__modal-list">
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Designed Python web scraping scripts to extract textual content from 5 websites using
+                                            Selenium. Conceptualised an ELT pipeline for indexing, archiving, field extraction,
+                                            and data cleaning to build high-quality, structured datasets.
+                                        </p>
+                                    </li>
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Interfaced with Twitter API to build large-scale geo-tagged datasets with an ETL pipeline.
+                                            Developed NLP-based geolocation models with composite feature engineering to predict user
+                                            locations based on tweet features.
+                                        </p>
+                                    </li>
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Utilized Javascript and Google Earth Engine to aggregate biodiversity data on specific
+                                            regions from public datasets. Conducted geospatial data analysis and generated
+                                            visualizations using Python, R, geopandas, and matplotlib.
+                                        </p>
+                                    </li>
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Demonstrated strong skills and exceptional adaptability to various project requirements.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work__card">
+                        <h3 class="work__title">Deep Learning Algorithm Engineering Intern</h3>
+                        <span class="work__button">
+                            See More <i class="bx bx-right-arrow-alt work__icon"></i>
+                        </span>
+                        <div class="work__modal">
+                            <div class="work__modal-content">
+                                <i class="bx bx-x work__modal-close"></i>
+                                <h3 class="work__modal-title">Deep Learning Algorithm Engineering Intern</h3>
+                                <p class="work__modal-description">
+                                    Panasonic R&D Center Singapore
+                                </p>
+                                <ul class="work__modal-list">
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Conceptualised a robust computer vision prototype involving 3 light-weight AI submodules
+                                            involving person detection, facial detection and key-point regression, image classification,
+                                            tracking, and homography techniques for a real-time end-to-end social distancing and mask
+                                            detection system on a Jetson platform (edge device).
+                                        </p>
+                                    </li>
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Built Docker images for module reusability, optimising for computation speed while
+                                            maintaining good accuracy.
+                                        </p>
+                                    </li>
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Utilised Generative Adversarial Networks (GANs) for image-to-image translation tasks to
+                                            augment existing image datasets to a different domain, reducing model bias in semantic
+                                            segmentation and other tasks.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="work__card">
+                        <h3 class="work__title">Software Engineer (Backend, IoT) Intern</h3>
+                        <span class="work__button">
+                            See More <i class="bx bx-right-arrow-alt work__icon"></i>
+                        </span>
+                        <div class="work__modal">
+                            <div class="work__modal-content">
+                                <i class="bx bx-x work__modal-close"></i>
+                                <h3 class="work__modal-title">Software Engineer (Backend, IoT) Intern</h3>
+                                <p class="work__modal-description">
+                                    Energy Research Institute @ NTU
+                                </p>
+                                <ul class="work__modal-list">
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Adapted multiple services and technologies, including NGINX, PostgreSQL, MQTT, ReactJS
+                                            and Python, as the project stack on a Linux-based system. Integrated various sub-modules
+                                            and applications for team members.
+                                        </p>
+                                    </li>
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Devised the main database logic design and web app components, including data handling
+                                            from PostgREST API.
+                                        </p>
+                                    </li>
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Refined and debugged software, including creating Python automated scripts to capture
+                                            and process real-time stream data from Bluetooth Gateways and IP Cameras.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--=============== PORTFOLIO ===============-->
+            <section class="portfolio section" id="portfolio">
+                <span class="section__subtitle">My Projects</span>
+                <h2 class="section__title">Portfolio</h2>
+
+                <div class="portfolio__filters">
+                    <span class="portfolio__item active-portfolio" data-filter="all">All</span>
+                    <span class="portfolio__item" data-filter=".product">Product</span>
+                    <span class="portfolio__item" data-filter=".design">Design</span>
+                    <span class="portfolio__item" data-filter=".web">Web</span>
+                </div>
+
+                <div class="portfolio__container container grid">
+                    <div class="portfolio__card mix web">
+                        <img src="assets/img/work1.jpg" alt="" class="portfolio__img">
+                        <h3 class="portfolio__title">w1 w</h3>
+                        <a href="#" class="portfolio__button">
+                            Demo <i class="bx bx-right-arrow-alt portfolio__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="portfolio__card mix product">
+                        <img src="assets/img/work2.jpg" alt="" class="portfolio__img">
+                        <h3 class="portfolio__title">w2 p</h3>
+                        <a href="#" class="portfolio__button">
+                            Demo <i class="bx bx-right-arrow-alt portfolio__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="portfolio__card mix design">
+                        <img src="assets/img/work3.jpg" alt="" class="portfolio__img">
+                        <h3 class="portfolio__title">w3 d</h3>
+                        <a href="#" class="portfolio__button">
+                            Demo <i class="bx bx-right-arrow-alt portfolio__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--=============== TESTIMONIALS ===============-->
+            <section class="testimonial section" style="display: none;">
+                <span class="section__subtitle">My supervisors and colleagues say</span>
+                <h2 class="section__title">Testimonial</h2>
+
+                <div class="testimonial__container container swiper">
+                    <div class="swiper-wrapper">
+                        <div class="testimonial__card swiper-slide">
+                            <img src="assets/img/testimonial1.png" alt="" class="testimonial__img">
+                            <h3 class="testimonial__name">Person 1</h3>
+                            <p class="testimonial__description">
+                                This section is incomplete.
+                            </p>
+                        </div>
+
+                        <div class="testimonial__card swiper-slide">
+                            <img src="assets/img/testimonial2.png" alt="" class="testimonial__img">
+                            <h3 class="testimonial__name">Person 2</h3>
+                            <p class="testimonial__description">
+                                This section is incomplete.
+                            </p>
+                        </div>
+
+                        <div class="testimonial__card swiper-slide">
+                            <img src="assets/img/testimonial3.png" alt="" class="testimonial__img">
+                            <h3 class="testimonial__name">Person 3</h3>
+                            <p class="testimonial__description">
+                                This section is incomplete.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+
+            <!--=============== CONTACT ===============-->
+            <section class="contact section" id="contact">
+                <span class="section__subtitle">Get in touch</span>
+                <h2 class="section__title">Contact Me</h2>
+
+                <div class="contact__container container grid">
+                    <div class="contact__content">
+                        <h3 class="contact__title">Talk to me</h3>
+                        <div class="contact__info">
+                            <div class="contact__card">
+                                <i class="bx bx-mail-send contact__card-icon"></i>
+                                <h3 class="contact__card-title">Email</h3>
+                                <span class="contact__card-data">leephiliphy@gmail.com</span>
+                                <a href="mailto:leephiliphy@gmail.com" target="_blank" class="contact__button">
+                                    Write to me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                                </a>
+                            </div>
+
+                            <div class="contact__card">
+                                <i class="bx bxl-linkedin-square contact__card-icon"></i>
+                                <h3 class="contact__card-title">LinkedIn</h3>
+                                <span class="contact__card-data">philip-lee-hann-yung</span>
+                                <a href="https://www.linkedin.com/in/philip-lee-hann-yung/" target="_blank" class="contact__button">
+                                    Connect with me <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact__content">
+                        <h3 class="contact__title">Drop me a message</h3>
+                        <form action="" class="contact__form">
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">Name</label>
+                                <input type="text" placeholder="Insert your name" class="contact__form-input">
+                            </div>
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">Email</label>
+                                <input type="email" placeholder="Insert your email" class="contact__form-input">
+                            </div>
+                            <div class="contact__form-div contact__form-area">
+                                <label for="" class="contact__form-tag">Message</label>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Leave a message" class="contact__form-input"></textarea>
+                            </div>
+                            <button class="button">Send Message (pending)</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer">
+            <div class="footer__container container">
+                <h1 class="footer__title">Philip</h1>
+                <ul class="footer__list">
+                    <li><div class="footer__link-float"><a href="#about" class="footer__link">About</a></div></li>
+                    <li><a href="#work" class="footer__link">Projects</a></li>
+                    <li><a href="#testimonial" class="footer__link">Testimonial</a></li>
+                </ul>
+                <ul class="footer__social">
+                    <a href="mailto:leephiliphy@gmail.com" target="_blank" class="footer__social-link">
+                        <i class='bx bxs-envelope'></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/philip-lee-hann-yung/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-linkedin-square'></i>
+                    </a>
+                    <a href="https://github.com/leephilipx/" target="_blank" class="footer__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </ul>
+                <span class="footer__copy">
+                    &copy; Philip Lee 2023. Adapted from
+                    <a href="https://github.com/bedimcode/responsive-portfolio-website-Ansel" target="_blank" class="footer__copy-link">
+                        Bedimcode</a>.
+                </span>
+            </div>
+        </footer>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="assets/js/scrollreveal.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
