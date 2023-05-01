@@ -1,2 +1,2 @@
 # https://leephilipx.github.io/
-This site showcases my GitHub projects and acts as storage for file retrieval via ```wget```.
+This site showcases my experience and GitHub projects, while acting as storage for file retrieval via ```wget```.
