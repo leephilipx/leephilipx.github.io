@@ -82,7 +82,7 @@
                     <div class="home__data">
                         <span class="home__greeting">Hello, I'm</span>
                         <h1 class="home__name">Philip LEE Hann Yung</h1>
-                        <h3 class="home__education">Fresh Graduate @ NTU, Singapore</h3>
+                        <h3 class="home__education">NTU Graduate @ Singapore</h3>
                         <div class="home__buttons">
                             <a href="/blob/pdf/Philip Lee Hann Yung Resume 2023 Portfolio Site.pdf" target="_blank" class="button">View Resume</a>
                             <a href="#about" class="button button--ghost">About me</a>
@@ -135,7 +135,7 @@
                             </div>
                         </div>
                         <div class="about__achievements-wrapper">
-                            <h3 class="about__achievements-title">Achievements</h3>
+                            <h3 class="about__achievements-title">Key Achievements</h3>
                             <div>
                                 <div class="about__achievements-data">
                                     <i class='bx bx-check-double about__achievements-icon'></i>
@@ -759,8 +759,8 @@
                         </a>
                     </div>
 
-                    <div class="portfolio__card mix hackathon">
-                        <img src="assets/img/portfolio-2022-carroxaws-hackathon.jpg" alt="" class="portfolio__img"/>
+                    <div class="portfolio__card mix academic">
+                        <img src="assets/img/portfolio-2023-ee4208-facedet.jpg" alt="" class="portfolio__img"/>
                         <div class="portfolio__spacer"></div>
                         <div>
                             <span class="portfolio__tags">Team Leader of 5 👩🏻‍💼</span>
@@ -769,11 +769,11 @@
                         <h3 class="portfolio__title">Online Face Detection and Recognition System</h3>
                         <p class="portfolio__subtitle">Module Project 2023: Intelligent Systems Design</p>
                         <div class="portfolio__spacer"></div>
-                        <a href="https://github.com/leephilipx/license-plate-extraction/blob/main/Finale%20Pitch%20-%20Carro%20x%20AWS%20Hackathon%202022.pdf"
+                        <a href="https://github.com/leephilipx/intelligent-system-design/blob/main/ee4208_part1_slides.pdf"
                            target="_blank" class="portfolio__button">
                             View slide deck <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
-                        <a href="https://github.com/leephilipx/license-plate-extraction"
+                        <a href="https://github.com/leephilipx/intelligent-system-design/"
                            target="_blank" class="portfolio__button">
                             View code <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
@@ -994,20 +994,20 @@
 
                     <div class="contact__content">
                         <h3 class="contact__title">Drop me a message</h3>
-                        <form action="" class="contact__form">
+                        <form action="sendEmail" class="contact__form" id="contact-form">
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">Name</label>
-                                <input type="text" placeholder="Insert your name" class="contact__form-input">
+                                <label for="contact_user_name" class="contact__form-tag">Name</label>
+                                <input id="contact-form-name" name="contact_user_name" type="text" placeholder="Insert your name" class="contact__form-input">
                             </div>
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">Email</label>
-                                <input type="email" placeholder="Insert your email" class="contact__form-input">
+                                <label for="contact_user_email" class="contact__form-tag">Email</label>
+                                <input id="contact-form-email" name="contact_user_email" type="email" placeholder="Insert your email" class="contact__form-input">
                             </div>
                             <div class="contact__form-div contact__form-area">
-                                <label for="" class="contact__form-tag">Message</label>
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Leave a message" class="contact__form-input"></textarea>
+                                <label for="contact_user_message" class="contact__form-tag">Message</label>
+                                <textarea id="contact-form-message" name="contact_user_message" id="" cols="30" rows="10" placeholder="Leave a message" class="contact__form-input"></textarea>
                             </div>
-                            <button class="button">Send Message (pending)</button>
+                            <button class="button" id="contact-send-button">Send Message</button>
                         </form>
                     </div>
                 </div>
@@ -1052,6 +1052,9 @@
 
         <!--=============== MIXITUP FILTER ===============-->
         <script src="assets/js/mixitup.min.js"></script>
+
+        <!--=============== EMAIL JS ===============-->
+        <script src="assets/js/email.min.js"></script>
 
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>

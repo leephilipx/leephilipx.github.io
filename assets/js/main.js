@@ -136,3 +136,37 @@ const sr = ScrollReveal({
 sr.reveal(`.home__data`)
 sr.reveal(`.home__handle`, {delay: 500})
 sr.reveal(`.home__social, .home__scroll`, {delay: 700, duration: 3000, origin: 'bottom'})
+
+
+/*=============== EMAIL CONTACT FORM ===============*/
+emailjs.init('GdwABB-FTAn27989T');  // https://dashboard.emailjs.com/admin/account
+
+window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+
+        event.preventDefault();
+
+        // Client-side form validation
+        if (document.getElementById('contact-form-name').value === '') {
+            alert('Please enter your name!');
+            return;
+        } else if (document.getElementById('contact-form-email').value === '') {
+            alert('Please enter your email address!');
+            return;
+        } else if (document.getElementById('contact-form-message').value === '') {
+            alert('Please enter your message!');
+            return;
+        }
+
+        // Send email
+        emailjs.sendForm('service_bqopn9f', 'template_jnbv7vt', this)
+            .then(function() {
+                // console.log('EMAIL SUCCESS!');
+                alert('Your message has been sent successfully!');
+                document.getElementById('contact-form').reset();
+            }, function(error) {
+                // console.log('EMAIL FAILED ...', error);
+                alert('Your message failed to send! Please check your Internet connection and try again.');
+            });
+    });
+}

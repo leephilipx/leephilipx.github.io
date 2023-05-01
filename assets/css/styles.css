@@ -14,11 +14,11 @@
         Teal: hsl(174, 63%, 62%)
   */
   --first-hue: 174;
-  --sat: 63%;
-  --lig: 62%;
+  --sat: 45%;
+  --lig: 54%;
   --second-hue: 219;
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 58%); /* -4% */
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 50%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
@@ -154,7 +154,7 @@ body.light-theme {
 .light-theme .home__scroll,
 .light-theme .button
 .light-theme .button:hover,
-.light-theme .active-portfolio,
+.light-theme .active-portfolio:not(.active-portfolio),
 .light-theme .footer__title,
 .light-theme .footer__link,
 .light-theme .footer__copy {
@@ -196,6 +196,9 @@ body.light-theme {
 }
 .light-theme .portfolio__item:hover:not(.active-portfolio) {
   background-color: hsl(var(--second-hue), 32%, 90%);
+}
+.light-theme .portfolio__item .active-portfolio {
+  color: var(--body-color);
 }
 .light-theme .portfolio__img {
   border: 1px solid var(--text-color-light);
@@ -476,7 +479,7 @@ body.light-theme {
 .about__achievements-wrapper {
   background-color: var(--container-color);
   border-radius: 1rem;
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -502,6 +505,7 @@ body.light-theme {
   display: block;
   color: var(--first-color);
   font-size: var(--small-font-size);
+  font-weight: var(--font-semibold);
 }
 
 .about__achievements-text {
@@ -1030,7 +1034,7 @@ a.footer__link:hover {
 }
 
 a.footer__copy-link {
-  color: var(--container-color);
+  color: hsl(var(--second-hue), 32%, 12%);
   font-weight: var(--font-medium);
 }
 
