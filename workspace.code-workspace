@@ -2,10 +2,9 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "../../../Downloads/build"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "leephilipx.github.io"
+	}
 }
