@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main () {
+    ifstream cin ("C:\\Users\\lee00\\Desktop\\orderid.txt");
+    ofstream cout ("ouput.csv");
+    cout<<"orderid,is_fraud\n";
+    vector <string> a (620497);
+    srand(unsigned(time(NULL)));
+    for (auto &i : a) {
+        cin>>i;
+        cout<<i<<','<<rand()%2<<'\n';
+    }
+    return 0;
+}
