@@ -9,7 +9,7 @@ from telepot.loop import MessageLoop
 from pprint import pprint
 
 # Initialise bot object
-token = '1151311124:AAFvyXTM2aZqCKf0pyHqVkCuLIY_v53KN3k'
+token = '''TOKEN GOES HERE'''
 bot = telepot.Bot(token)
 
 # Log print and log        ## Why must file manipulation be in a function

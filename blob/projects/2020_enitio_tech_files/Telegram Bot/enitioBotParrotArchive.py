@@ -5,7 +5,7 @@ from pprint import pprint
 import time
 
 # Initialise bot object
-token = '1151311124:AAFvyXTM2aZqCKf0pyHqVkCuLIY_v53KN3k'
+token = '''TOKEN GOES HERE'''
 bot = telepot.Bot(token)
 
 ## Sample dictionary returned from bot.getUpdates() ##

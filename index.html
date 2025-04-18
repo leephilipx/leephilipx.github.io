@@ -3,17 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!--=============== FAVICON ===============-->
-        <link rel="shortcut icon" href="assets/img/plhy_icon.png" type="image/x-icon">
-
-        <!--=============== BOXICONS ===============-->
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-        <!--=============== SWIPER CSS ===============-->
+        
+        <!--=============== CSS COMPONENTS ===============-->
+        <link rel="stylesheet" href="assets/css/boxicons.min.css">
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-        <!--=============== CSS ===============-->
+        <!--=============== CSS MAIN ===============-->
+        <link rel="shortcut icon" href="assets/img/icon-plhy.png" type="image/x-icon">
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <title>Philip Lee Hann Yung</title>
@@ -22,7 +18,15 @@
         <!--=============== HEADER ===============-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Philip</a>
+                <a href="#" class="nav__logo" id="navLogo">Philip</a>
+
+                <div id="customMenu" class="context-menu">
+                    <ul>
+                      <li><a href="h365-qranked">H365 QRanked</a></li>
+                      <li><a href="#">Option 2</a></li>
+                      <li><a href="#">Option 3</a></li>
+                    </ul>
+                  </div>
 
                 <div class="nav__menu">
                     <ul class="nav__list">
@@ -83,9 +87,12 @@
                     <div class="home__data">
                         <span class="home__greeting">Hello, I'm</span>
                         <h1 class="home__name">Philip LEE Hann Yung</h1>
-                        <h3 class="home__education">R&D Engineer (AI) @ Panasonic&nbsp;&nbsp;|&nbsp;&nbsp;NTU Graduate @ Singapore</h3>
+                        <h3 class="home__education">
+                            AI/ML Engineer @ Panasonic&nbsp;&nbsp;|&nbsp;&nbsp;NTU&nbsp;
+                            <img src="assets/img/icon-flag-sg.png" style="height:0.8rem;"/>
+                        </h3>
                         <div class="home__buttons">
-                            <a href="https://drive.google.com/file/d/11O8hBBdkmVZCqk-Z16JUzAoFgku_zeSI/view?usp=sharing" target="_blank" class="button">View Resume</a>
+                            <a href="blob/pdf/Philip%20Lee%20Hann%20Yung%20Resume.pdf" target="_blank" class="button">View Resume</a>
                             <a href="#about" class="button button--ghost">About me</a>
                         </div>
                     </div>
@@ -137,8 +144,22 @@
                             </div>
                         </div>
                         <div class="about__achievements-wrapper">
-                            <h3 class="about__achievements-title">Key Achievements</h3>
+                            <h3 class="about__achievements-title">Key Highlights</h3>
                             <div>
+                                <div class="about__achievements-data">
+                                    <i class='bx bxs-certification about__achievements-icon'></i>
+                                    <div>
+                                        <span class="about__achievements-subtitle">Certifications</span>
+                                        <span class="about__achievements-text">AWS Solutions Architect Associate</span>
+                                    </div>
+                                </div>
+                                <div class="about__achievements-data">
+                                    <i class='bx bx-check-double about__achievements-icon'></i>
+                                    <div>
+                                        <span class="about__achievements-subtitle">Global Undergraduate Awards</span>
+                                        <span class="about__achievements-text">Highly Commended (Computer Science) for Bachelor's thesis</span>
+                                    </div>
+                                </div>
                                 <div class="about__achievements-data">
                                     <i class='bx bx-check-double about__achievements-icon'></i>
                                     <div>
@@ -149,17 +170,8 @@
                                 <div class="about__achievements-data">
                                     <i class='bx bx-check-double about__achievements-icon'></i>
                                     <div>
-                                        <span class="about__achievements-subtitle">3* Dean’s List Awardees</span>
-                                        <span class="about__achievements-text">Academic Year 2022-2023</span>
-                                        <span class="about__achievements-text">Academic Year 2020-2021</span>
-                                        <span class="about__achievements-text">Academic Year 2019-2020</span>
-                                    </div>
-                                </div>
-                                <div class="about__achievements-data">
-                                    <i class='bx bx-check-double about__achievements-icon'></i>
-                                    <div>
-                                        <span class="about__achievements-subtitle">NTU Class of 1985 Scholarship Recipient</span>
-                                        <span class="about__achievements-text">Academic Year 2022-2023</span>
+                                        <span class="about__achievements-subtitle">3 &times; Dean’s List Awardees</span>
+                                        <span class="about__achievements-text">Academic Year 2020, 2021, 2023</span>
                                     </div>
                                 </div>
                                 <div class="about__achievements-data">
@@ -167,20 +179,6 @@
                                     <div>
                                         <span class="about__achievements-subtitle">Carro x AWS Hackathon 2022 Winner</span>
                                         <span class="about__achievements-text">Champion: Team Leader of 5</span>
-                                    </div>
-                                </div>
-                                <div class="about__achievements-data">
-                                    <i class='bx bx-check-double about__achievements-icon'></i>
-                                    <div>
-                                        <span class="about__achievements-subtitle">NTU President Research Scholar (with Merit)</span>
-                                        <span class="about__achievements-text">Undergraduate Research Experience on CAmpus (URECA) 2020</span>
-                                    </div>
-                                </div>
-                                <div class="about__achievements-data">
-                                    <i class='bx bx-check-double about__achievements-icon'></i>
-                                    <div>
-                                        <span class="about__achievements-subtitle">1 Published Conference Paper as First Author</span>
-                                        <span class="about__achievements-text">IEEE GCCE 2022</span>
                                     </div>
                                 </div>
                             </div>
@@ -192,7 +190,7 @@
                             <div class="about__box">
                                 <i class="bx bx-award about__icon"></i>
                                 <h3 class="about__title">Experience</h3>
-                                <span class="about__subtitle">2 years internships</span>
+                                <span class="about__subtitle">2+ years</span>
                             </div>
                             <div class="about__box">
                                 <i class="bx bx-code-block about__icon"></i>
@@ -231,6 +229,45 @@
                 <h2 class="section__title">Work Experience</h2>
 
                 <div class="work__container container grid">
+
+                    <div class="work__card">
+                        <img src="assets/img/work-pidsg.jpg" class="work__companylogo"/>
+                        <h3 class="work__title">AI/ML Engineer</h3>
+                        <p class="work__description">Jul 2023 - Present</p>
+                        <div class="work__spacer"></div>
+                        <span class="work__button">
+                            See More <i class="bx bx-right-arrow-alt work__icon"></i>
+                        </span>
+                        <div class="work__modal">
+                            <div class="work__modal-content">
+                                <i class="bx bx-x work__modal-close"></i>
+                                <h3 class="work__modal-title">AI/ML Engineer</h3>
+                                <p class="work__modal-description">
+                                    Panasonic Industrial Devices Singapore<br>Jul 2023 - Present
+                                </p>
+                                <ul class="work__modal-list">
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            In depth exploration in terms of theoretical, conceptual, and implementation aspects.
+                                        </p>
+                                    </li>
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Design automatic systems, build applications, proof of concepts solutions, and IP creation.
+                                        </p>
+                                    </li>
+                                    <li class="work__modal-item">
+                                        <i class="bx bx-check work__modal-icon"></i>
+                                        <p class="work__modal-info">
+                                            Provide expertise in machine learning (e.g. deep learning), data mining, signal processing, automation, IoT, microcontroller, etc.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="work__card">
                         <img src="assets/img/work-nbs.jpg" class="work__companylogo"/>
@@ -386,15 +423,25 @@
                         <img src="assets/img/portfolio-2023-fyp-driver-action.jpg" alt="" class="portfolio__img"/>
                         <div class="portfolio__spacer"></div>
                         <div>
+                            <a href="https://ieeexplore.ieee.org/document/10448437" target="_blank"
+                                class="portfolio__tags portfolio__tags-var2">Related Publication 🖱️🔗</a><br>
                             <span class="portfolio__tags">FEATURED 🔥</span>
-                            <span class="portfolio__tags portfolio__class">Computer Vision</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Computer Vision</span>
                         </div>
                         <h3 class="portfolio__title">Driver Action Recognition using Artificial Intelligence</h3>
                         <p class="portfolio__subtitle">Final Year Project 2023: School of Electrical and Electronic Engineering ✕ Continental-NTU Corporate Lab</p>
                         <div class="portfolio__spacer"></div>
-                        <a href="blob/video/2023_fyp_demo_video_combined_clip2.html"
+                        <a href="blob/video/#/2023_fyp_demo_video_combined_clip2.mp4"
                            target="_blank" class="portfolio__button">
                             View sample video <i class="bx bx-right-arrow-alt portfolio__icon"></i>
+                        </a>
+                        <a href="blob/pdf/2023_fyp_slides.pdf"
+                           target="_blank" class="portfolio__button">
+                            View slide deck <i class="bx bx-right-arrow-alt portfolio__icon"></i>
+                        </a>
+                        <a href="blob/pdf/2023_fyp_report.pdf"
+                           target="_blank" class="portfolio__button">
+                            View FYP report <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
                         <a href="https://github.com/leephilipx/driver-action-recognition"
                            target="_blank" class="portfolio__button">
@@ -409,7 +456,7 @@
                             <span class="portfolio__tags">FEATURED 🔥</span>
                             <span class="portfolio__tags">Champion 🏆</span><br>
                             <span class="portfolio__tags">Team Leader of 5 👩🏻‍💼</span>
-                            <span class="portfolio__tags portfolio__class">Computer Vision</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Computer Vision</span>
                         </div>
                         <h3 class="portfolio__title">License Plate Extraction</h3>
                         <p class="portfolio__subtitle">Carro x AWS Hackathon 2022</p>
@@ -418,7 +465,7 @@
                            target="_blank" class="portfolio__button">
                             View public post by NTU EEE<i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
-                        <a href="https://drive.google.com/file/d/1MW20Wn4qvDpaA7O9XkD4gWkbvPIQX4Yr/view?usp=sharing"
+                        <a href="blob/pdf/2022_carroxaws_finale_slides.pdf"
                            target="_blank" class="portfolio__button">
                             View slide deck <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
@@ -433,7 +480,7 @@
                         <div class="portfolio__spacer"></div>
                         <div>
                             <span class="portfolio__tags">Portfolio</span>
-                            <span class="portfolio__tags portfolio__class">Website</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Website</span>
                         </div>
                         <h3 class="portfolio__title">Responsive Portfolio Website</h3>
                         <p class="portfolio__subtitle">Projects and Experience</p>
@@ -452,12 +499,12 @@
                         <div class="portfolio__spacer"></div>
                         <div>
                             <span class="portfolio__tags">Team Leader of 5 👩🏻‍💼</span>
-                            <span class="portfolio__tags portfolio__class">Computer Vision</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Computer Vision</span>
                         </div>
                         <h3 class="portfolio__title">Online Face Detection and Recognition System</h3>
                         <p class="portfolio__subtitle">Module Project 2023: Intelligent Systems Design</p>
                         <div class="portfolio__spacer"></div>
-                        <a href="https://drive.google.com/file/d/1WEVaQf4y07mNMi9IlyAFt5HKZOJczc-s/view?usp=sharing"
+                        <a href="blob/pdf/2023_ee4208_part1_slides.pdf"
                            target="_blank" class="portfolio__button">
                             View slide deck <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
@@ -473,12 +520,12 @@
                         <div>
                             <span class="portfolio__tags">Most Innovative Time Series Prediction 🏆</span><br>
                             <span class="portfolio__tags">Team of 4</span>
-                            <span class="portfolio__tags portfolio__class">Time Series</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Time Series</span>
                         </div>
                         <h3 class="portfolio__title">P.E.A.K (Price & Electricity Analysis Kit)</h3>
                         <p class="portfolio__subtitle">MLDA@EEE Deep Learning Week Hackathon 2022</p>
                         <div class="portfolio__spacer"></div>
-                        <a href="https://drive.google.com/file/d/1LY9bTYMd4iN2fJHPNrYAfpWxtxfcawiz/view?usp=sharing"
+                        <a href="blob/pdf/2022_mldadlw_finale_slides.pdf"
                            target="_blank" class="portfolio__button">
                             View slide deck <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
@@ -492,19 +539,21 @@
                         <img src="assets/img/portfolio-2021-dip-touchless-radar.jpg" alt="" class="portfolio__img"/>
                         <div class="portfolio__spacer"></div>
                         <div>
+                            <a href="https://ieeexplore.ieee.org/document/10014250" target="_blank"
+                                class="portfolio__tags portfolio__tags-var2">Related Publication 🖱️🔗</a><br>
                             <span class="portfolio__tags">Team Leader of 5 👩🏻‍💼</span>
-                            <span class="portfolio__tags portfolio__class">Signal Processing</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Signal Processing</span>
                         </div>
                         <h3 class="portfolio__title">Smart Touchless Control with Credit-Card Sized Radar Sensor and Microcomputer</h3>
                         <p class="portfolio__subtitle">NTU Design and Innovation Project 2021</p>
                         <div class="portfolio__spacer"></div>
-                        <a href="blob/video/2021_dip_demo_video_subtitled.html"
+                        <a href="blob/video/#/2021_dip_demo_video_subtitled.mp4"
                            target="_blank" class="portfolio__button">
                             View sample video <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
-                        <a href="https://ieeexplore.ieee.org/document/10014250"
+                        <a href="blob/pdf/2021_dip_report.pdf"
                            target="_blank" class="portfolio__button">
-                            View publication <i class="bx bx-right-arrow-alt portfolio__icon"></i>
+                            View report <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
                         <a href="https://github.com/leephilipx/smart-touchless-control-radar"
                            target="_blank" class="portfolio__button">
@@ -517,16 +566,16 @@
                         <div class="portfolio__spacer"></div>
                         <div>
                             <span class="portfolio__tags">NTU President Research Scholar (Merit) 🏆</span><br>
-                            <span class="portfolio__tags portfolio__class">Signal Processing</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Signal Processing</span>
                         </div>
                         <h3 class="portfolio__title">Deep-learning Based Approach for OFDM System</h3>
                         <p class="portfolio__subtitle">Undergraduate Research Experience on CAmpus (URECA) 2021</p>
                         <div class="portfolio__spacer"></div>
-                        <a href="https://drive.google.com/file/d/1bewITw9cKWEw2VmX7Rnu3NXu4sPBvTiR/view?usp=sharing"
+                        <a href="blob/pdf/2021_ureca_slides.pdf"
                            target="_blank" class="portfolio__button">
                             View slide deck <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
-                        <a href="https://drive.google.com/file/d/1h5441c8IoB4FP2lvf6l6KCYR_Fc10adX/view?usp=sharing"
+                        <a href="blob/pdf/2021_ureca_paper.pdf"
                            target="_blank" class="portfolio__button">
                             View paper <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
@@ -542,7 +591,7 @@
                         <div>
                             <span class="portfolio__tags">Top 10 Finalist (out of 400 teams) 🏆</span><br>
                             <span class="portfolio__tags">Team of 4</span>
-                            <span class="portfolio__tags portfolio__class">Computer Vision</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Computer Vision</span>
                         </div>
                         <h3 class="portfolio__title">Try-it-on</h3>
                         <p class="portfolio__subtitle">Shopee Ultra-Hackathon 2021</p>
@@ -558,7 +607,7 @@
                         <div class="portfolio__spacer"></div>
                         <div>
                             <span class="portfolio__tags">55k Visitors in 2 Years 📈</span>
-                            <span class="portfolio__tags portfolio__class">Website</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Website</span>
                         </div>
                         <h3 class="portfolio__title">EEE/IEM Past Year Papers Website</h3>
                         <p class="portfolio__subtitle">NTU EEE Club 2021</p>
@@ -578,12 +627,12 @@
                         <div class="portfolio__spacer"></div>
                         <div>
                             <span class="portfolio__tags">Team Leader of 4 👩🏻‍💼</span><br>
-                            <span class="portfolio__tags portfolio__class">Natural Language Processing</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Natural Language Processing</span>
                         </div>
                         <h3 class="portfolio__title">Fraudulent Job Postings Sentiment Analysis</h3>
                         <p class="portfolio__subtitle">Module Project 2020: Introduction to Data Science and Artificial Intelligence</p>
                         <div class="portfolio__spacer"></div>
-                        <a href="https://drive.google.com/file/d/1n-r9rB7DY2Gtskd8lOnDBwZ4rpBT91-J/view?usp=sharing"
+                        <a href="blob/pdf/2020_ee0005_slides.pdf"
                            target="_blank" class="portfolio__button">
                             View slide deck <i class="bx bx-right-arrow-alt portfolio__icon"></i>
                         </a>
@@ -598,7 +647,7 @@
                         <div class="portfolio__spacer"></div>
                         <div>
                             <span class="portfolio__tags">Team of 4</span>
-                            <span class="portfolio__tags portfolio__class">Unity: Game Engine</span>
+                            <span class="portfolio__tags portfolio__tags-var1">Unity: Game Engine</span>
                         </div>
                         <h3 class="portfolio__title">Scarlet Mansion</h3>
                         <p class="portfolio__subtitle">Freshmen Orientation Camp 2020</p>
@@ -1041,7 +1090,7 @@
                 <h1 class="footer__title">Philip</h1>
                 <ul class="footer__list">
                     <li><a href="#about" class="footer__link">About</a></li>
-                    <li><a href="https://drive.google.com/file/d/11O8hBBdkmVZCqk-Z16JUzAoFgku_zeSI/view?usp=sharing" target="_blank" class="footer__link">Resume</a></li>
+                    <li><a href="blob/pdf/Philip%20Lee%20Hann%20Yung%20Resume.pdf" target="_blank" class="footer__link">Resume</a></li>
                     <li><a href="#work-exp" class="footer__link">Work</a></li>
                     <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
                     <li><a href="#skills" class="footer__link">Skills</a></li>
@@ -1058,7 +1107,7 @@
                     </a>
                 </ul>
                 <span class="footer__copy">
-                    &copy; Philip Lee 2023. Adapted from
+                    &copy; Philip Lee 2025. Adapted from
                     <a href="https://github.com/bedimcode/responsive-portfolio-website-Ansel" target="_blank" class="footer__copy-link">
                         Bedimcode</a>.
                 </span>
@@ -1066,19 +1115,13 @@
         </footer>
 
 
-        <!--=============== SCROLLREVEAL ===============-->
+        <!--=============== JS COMPONENTS ===============-->
         <script src="assets/js/scrollreveal.min.js"></script>
-
-        <!--=============== SWIPER JS ===============-->
         <script src="assets/js/swiper-bundle.min.js"></script>
-
-        <!--=============== MIXITUP FILTER ===============-->
         <script src="assets/js/mixitup.min.js"></script>
-
-        <!--=============== EMAIL JS ===============-->
         <script src="assets/js/email.min.js"></script>
 
-        <!--=============== MAIN JS ===============-->
+        <!--=============== JS MAIN ===============-->
         <script src="assets/js/main.js"></script>
     </body>
 </html>
