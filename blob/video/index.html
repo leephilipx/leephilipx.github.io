@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Video Player</title>
     <style>
         body {
@@ -9,7 +12,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            /* height: 100vh; */
             margin: 0;
         }
 
@@ -17,32 +20,46 @@
             font-size: 0.9rem;
             color: white;
             text-align: center;
-            margin-bottom: 20px;
+            margin: 10px 0px;
             font-family: 'Courier New', Courier, monospace;
         }
     </style>
 </head>
+
 <body>
     <h1 id="video-title"></h1>
-    <video id="video-player-source" controls width="90%" height="90%" autoplay muted>
+    <video id="video-player-source" controls width="90%" autoplay muted>
         <source id="video-source" src="" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
+    <script src="../../assets/js/shared-utils.js"></script>
     <script>
+        const videoTitle = document.getElementById('video-title');
+
         // Get the full URL and extract filename
         const path = window.location.href;
-        const fileName = path.split('/#/').pop()
+        let fileName = path.split('/#/')
 
-        // Set the source dynamically
-        const videoTitle = document.querySelector('h1');
-        videoTitle.textContent = "Currently playing: " + fileName;
-        const videoSource = document.getElementById('video-source');
-        videoSource.src = fileName;
-
-        // Reload the video with the new source
-        const video = document.getElementById('video-player-source');
-        video.load();
+        // If valid URL, set the source dynamically and reload with new source
+        if (fileName.length == 1) {
+            videoTitle.textContent = "Invalid URL: You can play a video with the pattern /#/filename.extension";
+        } else {
+            fileName = fileName.pop();
+            fileExists(fileName).then((exists) => {
+                if (!exists) {
+                alert("[Error 404] Video file not found: " + fileName);
+                videoTitle.textContent = ""
+                } else {
+                    videoTitle.textContent = "Currently playing: " + fileName;
+                    const videoSource = document.getElementById('video-source');
+                    videoSource.src = fileName;
+                    const video = document.getElementById('video-player-source');
+                    video.load();
+                }
+            }); 
+        }
     </script>
 </body>
+
 </html>

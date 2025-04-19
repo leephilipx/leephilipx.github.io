@@ -265,6 +265,7 @@ body.light-theme {
   color: var(--first-color);
   font-weight: var(--font-medium);
   transition: .4s;
+  padding: 3px;
 }
 
 .nav__logo:hover {
@@ -317,6 +318,38 @@ body.light-theme {
 /* Change background header */
 .scroll-header {
   box-shadow: 0 4px 4px hsla(0%, 0%, 4%, .3);
+}
+
+
+/*=============== SECRET MENU ===============*/
+.secret__menu {
+  position: absolute;
+  display: none;
+  border: 1px dashed var(--title-color);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  z-index: 1000;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.secret__menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.secret__menu li {
+  padding: 7px 14px;
+  background-color: hsla(var(--second-hue), 32%, 16%, .8);
+}
+
+.secret__menu li:hover:not(.secret__menu-title) {
+  background-color: var(--first-color);
+}
+
+.secret__menu a {
+  color: var(--title-color);
+  padding: 4px;
 }
 
 
@@ -1315,29 +1348,4 @@ a.footer__copy-link {
     border-radius: .5rem;
   }
 
-}
-
-
-.context-menu {
-  position: absolute;
-  display: none;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  z-index: 1000;
-  padding: 0;
-}
-
-.context-menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.context-menu li {
-  padding: 8px 16px;
-}
-
-.context-menu li:hover {
-  background-color: #f0f0f0;
 }

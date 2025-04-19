@@ -7,6 +7,25 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader)
 
 
+/*=============== SECRET MENU ===============*/
+
+const navLogo = document.getElementById('navLogo');
+const menu = document.getElementById('secretMenu');
+
+// Show custom menu
+navLogo.addEventListener('contextmenu', function (e) {
+  e.preventDefault(); // Prevent default right-click
+  menu.style.top = `${e.pageY}px`;
+  menu.style.left = `${e.pageX}px`;
+  menu.style.display = 'block';
+});
+
+// Hide on click elsewhere
+document.addEventListener('click', function () {
+  menu.style.display = 'none';
+});
+
+
 /*=============== WORK MODAL ===============*/
 const modalViews = document.querySelectorAll('.work__modal'),
       modalBtns = document.querySelectorAll('.work__button'),
@@ -171,20 +190,3 @@ window.onload = function() {
             });
     });
 }
-
-
-const navLogo = document.getElementById('navLogo');
-const menu = document.getElementById('customMenu');
-
-// Show custom menu
-navLogo.addEventListener('contextmenu', function (e) {
-  e.preventDefault(); // Prevent default right-click
-  menu.style.top = `${e.pageY}px`;
-  menu.style.left = `${e.pageX}px`;
-  menu.style.display = 'block';
-});
-
-// Hide on click elsewhere
-document.addEventListener('click', function () {
-  menu.style.display = 'none';
-});
