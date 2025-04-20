@@ -15,8 +15,8 @@ const menu = document.getElementById('secretMenu');
 // Show custom menu
 navLogo.addEventListener('contextmenu', function (e) {
   e.preventDefault(); // Prevent default right-click
-  menu.style.top = `${e.pageY}px`;
-  menu.style.left = `${e.pageX}px`;
+  menu.style.top = `${e.clientY}px`;
+  menu.style.left = `${e.clientX}px`;
   menu.style.display = 'block';
 });
 

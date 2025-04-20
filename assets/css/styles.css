@@ -138,7 +138,7 @@ body.light-theme {
 }
 
 .light-theme .nav__menu {
-  background-color: hsla(var(--second-hue), 32%, 90%, .8);
+  background-color: hsla(var(--second-hue), 32%, 95%, .8);
 }
 
 .light-theme .section__subtitle {
@@ -265,7 +265,7 @@ body.light-theme {
   color: var(--first-color);
   font-weight: var(--font-medium);
   transition: .4s;
-  padding: 3px;
+  padding: 4px;
 }
 
 .nav__logo:hover {
@@ -278,6 +278,7 @@ body.light-theme {
   margin-left: -45%; /* Negative half of width. */
   bottom: 1rem;
   background-color: hsla(var(--second-hue), 32%, 16%, .8);
+  box-shadow: 0 2px 4px hsla(0, 0%, 1%, .1);
   width: 90%;
   border-radius: 4rem;
   padding: 1rem 2.25rem;
@@ -327,7 +328,7 @@ body.light-theme {
   display: none;
   border: 1px dashed var(--title-color);
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  z-index: 1000;
+  z-index: var(--z-modal);
   padding: 0;
   font-size: 0.8rem;
 }
@@ -340,7 +341,7 @@ body.light-theme {
 
 .secret__menu li {
   padding: 7px 14px;
-  background-color: hsla(var(--second-hue), 32%, 16%, .8);
+  background-color: var(--container-color);
 }
 
 .secret__menu li:hover:not(.secret__menu-title) {
