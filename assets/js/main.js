@@ -192,7 +192,6 @@ window.onload = function() {
 
 
 /*=============== WORK TIMELINE ===============*/
-
 // Watch for toggle changes to show company logo when details are open
 document.querySelectorAll('.timeline__item-companylogo').forEach((img, index) => {
     const details = document.querySelectorAll('.timeline__panel')[index];
@@ -216,6 +215,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }, {
         threshold: 0.3 // Adjust this value to control when the animation triggers
     });
-
     items.forEach(item => observer.observe(item));
 });
