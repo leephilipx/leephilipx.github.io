@@ -8,7 +8,6 @@ window.addEventListener('scroll', scrollHeader)
 
 
 /*=============== SECRET MENU ===============*/
-
 const navLogo = document.getElementById('navLogo');
 const menu = document.getElementById('secretMenu');
 
@@ -26,27 +25,27 @@ document.addEventListener('click', function () {
 });
 
 
-/*=============== WORK MODAL ===============*/
-const modalViews = document.querySelectorAll('.work__modal'),
-      modalBtns = document.querySelectorAll('.work__button'),
-      modalCloses = document.querySelectorAll('.work__modal-close')
+/*=============== WORK MODAL (DEPRECATED) ===============*/
+// const modalViews = document.querySelectorAll('.work__modal'),
+//       modalBtns = document.querySelectorAll('.work__button'),
+//       modalCloses = document.querySelectorAll('.work__modal-close')
 
-let modal = function(modalClick) {
-    modalViews[modalClick].classList.add('active-modal')
+// let modal = function(modalClick) {
+//     modalViews[modalClick].classList.add('active-modal')
 
-}
+// }
 
-modalBtns.forEach((mb, i) => {
-    mb.addEventListener('click', () => { modal(i) })
-})
+// modalBtns.forEach((mb, i) => {
+//     mb.addEventListener('click', () => { modal(i) })
+// })
 
-modalCloses.forEach((mc) => {
-    mc.addEventListener('click', () => {
-        modalViews.forEach((mv) => {
-            mv.classList.remove('active-modal')
-        })
-    })
-})
+// modalCloses.forEach((mc) => {
+//     mc.addEventListener('click', () => {
+//         modalViews.forEach((mv) => {
+//             mv.classList.remove('active-modal')
+//         })
+//     })
+// })
 
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
@@ -70,26 +69,26 @@ function activeWork() {
 linkWork.forEach(l => l.addEventListener('click', activeWork))
 
 
-/*=============== SWIPER TESTIMONIAL ===============*/
-let swiperTestimonial = new Swiper('.testimonial__container', {
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: true,
+/*=============== SWIPER TESTIMONIAL (DEPRECATED) ===============*/
+// let swiperTestimonial = new Swiper('.testimonial__container', {
+//     spaceBetween: 24,
+//     loop: true,
+//     grabCursor: true,
 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 48,
-        },
-    }
-})
+//     pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//     },
+//     breakpoints: {
+//         576: {
+//             slidesPerView: 2,
+//         },
+//         768: {
+//             slidesPerView: 2,
+//             spaceBetween: 48,
+//         },
+//     }
+// })
 
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
@@ -190,3 +189,33 @@ window.onload = function() {
             });
     });
 }
+
+
+/*=============== WORK TIMELINE ===============*/
+
+// Watch for toggle changes to show company logo when details are open
+document.querySelectorAll('.timeline__item-companylogo').forEach((img, index) => {
+    const details = document.querySelectorAll('.timeline__panel')[index];
+    const toggleImage = () => {
+        img.style.opacity = details.open ? '0.9' : '0';
+    };
+    toggleImage();
+    details.addEventListener('toggle', toggleImage);
+});
+
+// Animate timeline items on scroll
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll('.timeline__list li');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('reveal');
+                observer.unobserve(entry.target); // optional: remove observer after reveal
+            }
+        });
+    }, {
+        threshold: 0.3 // Adjust this value to control when the animation triggers
+    });
+
+    items.forEach(item => observer.observe(item));
+});

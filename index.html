@@ -62,15 +62,6 @@
                     </ul>
                 </div>
 
-                <!-- <div style="display: flex; flex-direction: row; align-items: center; color: hsl(0, 100%, 70%);
-                            font-weight: bold; font-size: 80%;">
-                    <i class='bx bxs-wrench'></i><i class='bx bxs-wrench'></i>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <p>This site is still in progress!</p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    <i class='bx bxs-wrench'></i><i class='bx bxs-wrench'></i>
-                </div> -->
-
                 <!-- Theme change button-->
                 <i class='bx bx-moon change-theme' id="theme-button"></i>
             </nav>
@@ -221,188 +212,114 @@
                 </div>
             </section>
             
-            
-            <!--=============== WORK ===============-->
+
+            <!--=============== WORK TIMELINE ===============-->
             <section class="work section" id="work-exp">
                 <span class="section__subtitle">My Professional Work</span>
                 <h2 class="section__title">Work Experience</h2>
-
-                <div class="work__container container grid">
-
-                    <div class="work__card">
-                        <img src="assets/img/work-pidsg.jpg" class="work__companylogo"/>
-                        <h3 class="work__title">AI/ML Engineer</h3>
-                        <p class="work__description">Jul 2023 - Present</p>
-                        <div class="work__spacer"></div>
-                        <span class="work__button">
-                            See More <i class="bx bx-right-arrow-alt work__icon"></i>
-                        </span>
-                        <div class="work__modal">
-                            <div class="work__modal-content">
-                                <i class="bx bx-x work__modal-close"></i>
-                                <h3 class="work__modal-title">AI/ML Engineer</h3>
-                                <p class="work__modal-description">
-                                    Panasonic Industrial Devices Singapore<br>Jul 2023 - Present
-                                </p>
-                                <ul class="work__modal-list">
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            In depth exploration in terms of theoretical, conceptual, and implementation aspects.
-                                        </p>
-                                    </li>
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Design automatic systems, build applications, proof of concepts solutions, and IP creation.
-                                        </p>
-                                    </li>
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Provide expertise in machine learning (e.g. deep learning), data mining, signal processing, automation, IoT, microcontroller, etc.
-                                        </p>
-                                    </li>
-                                </ul>
+            
+                <div class="timeline__container container">
+                    <ul class="timeline__list">
+                        <li>
+                            <div class="timeline__item-extra">
+                                <span>Jul 2023 - Present</span>
+                                <img src="assets/img/work-pidsg.jpg" class="timeline__item-companylogo"/>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="work__card">
-                        <img src="assets/img/work-nbs.jpg" class="work__companylogo"/>
-                        <h3 class="work__title">Research Assistant (Data Science)</h3>
-                        <p class="work__description">May 2022 - Jan 2023</p>
-                        <div class="work__spacer"></div>
-                        <span class="work__button">
-                            See More <i class="bx bx-right-arrow-alt work__icon"></i>
-                        </span>
-                        <div class="work__modal">
-                            <div class="work__modal-content">
-                                <i class="bx bx-x work__modal-close"></i>
-                                <h3 class="work__modal-title">Research Assistant (Data Science)</h3>
-                                <p class="work__modal-description">
-                                    Nanyang Business School<br>May 2022 - Jan 2023
-                                </p>
-                                <ul class="work__modal-list">
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Designed Python web scraping scripts to extract textual content from 5 websites using
-                                            Selenium. Conceptualised ELT pipeline for indexing, archiving, field extraction, and
-                                            data cleaning to build high-quality, structured datasets.
-                                        </p>
-                                    </li>
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Interfaced with Twitter API to build large-scale geo-tagged datasets (4 mil tweets) with
-                                            ETL pipeline. Developed NLP-based geolocation models with composite feature engineering
-                                            to predict user locations based on tweet features.
-                                        </p>
-                                    </li>
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Utilized JavaScript and Google Earth Engine to aggregate biodiversity data on specific
-                                            regions from public datasets. Conducted geospatial data analysis and generated visualizations
-                                            using Python, R, geopandas, and matplotlib.
-                                        </p>
-                                    </li>
-                                </ul>
+                            <details class="timeline__panel" open>
+                                <summary>
+                                    <div class="timeline__item-title">AI/ML Engineer</div>
+                                    <div class="timeline__item-subtitle">Panasonic Industrial Devices Singapore</div>
+                                </summary>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>In depth exploration in terms of theoretical, conceptual, and implementation aspects.</span>
+                                </div>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Design automatic systems, build applications, proof of concepts solutions, and IP creation.</span>
+                                </div>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Provide expertise in machine learning (e.g. deep learning), data mining, signal processing, automation, IoT, microcontroller, etc.</span>
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <div class="timeline__item-extra">
+                                <span>May 2022 - Jan 2023</span>
+                                <img src="assets/img/work-nbs.jpg" class="timeline__item-companylogo"/>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="work__card">
-                        <img src="assets/img/work-prdcsg.jpg" class="work__companylogo"/>
-                        <h3 class="work__title">Deep Learning Algorithm Engineering Intern</h3>
-                        <p class="work__description">Jan 2022 - Jun 2022</p>
-                        <div class="work__spacer"></div>
-                        <span class="work__button">
-                            See More <i class="bx bx-right-arrow-alt work__icon"></i>
-                        </span>
-                        <div class="work__modal">
-                            <div class="work__modal-content">
-                                <i class="bx bx-x work__modal-close"></i>
-                                <h3 class="work__modal-title">Deep Learning Algorithm Engineering Intern</h3>
-                                <p class="work__modal-description">
-                                    Panasonic R&D Center Singapore<br>Jan 2022 - Jun 2022
-                                </p>
-                                <ul class="work__modal-list">
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Conceptualised robust computer vision prototype using Python, OpenCV and PyTorch for
-                                            real-time end-to-end social distancing and mask detection on network camera and low-power
-                                            15-watt Jetson device.
-                                        </p>
-                                    </li>
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Investigated and trained 3 light-weight AI submodules, optimising for computation speed
-                                            while maintaining good accuracy. Built and containerized system as Docker image for system
-                                            reusability and deployment.
-                                        </p>
-                                    </li>
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Utilised and trained Generative Adversarial Networks (GANs) for image-to-image translation
-                                            tasks to augment existing image datasets to different domain, reducing model bias in semantic
-                                            segmentation and other tasks.
-                                        </p>
-                                    </li>
-                                </ul>
+                            <details class="timeline__panel" open>
+                                <summary>
+                                    <div class="timeline__item-title">Research Assistant (Data Science)</div>
+                                    <div class="timeline__item-subtitle">Nanyang Business School, NTU</div>
+                                </summary>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Designed Python web scraping scripts to extract textual content from 5 websites using Selenium. Conceptualised ELT pipeline for indexing, archiving, field extraction, and data cleaning to build high-quality, structured datasets.</span>
+                                </div>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Interfaced with Twitter API to build large-scale geo-tagged datasets (4 mil tweets) with ETL pipeline. Developed NLP-based geolocation models with composite feature engineering to predict user locations based on tweet features.</span>
+                                </div>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Utilized JavaScript and Google Earth Engine to aggregate biodiversity data on specific regions from public datasets. Conducted geospatial data analysis and generated visualizations using Python, R, geopandas, and matplotlib.</span>
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <div class="timeline__item-extra">
+                                <span>Jan 2022 - Jun 2022</span>
+                                <img src="assets/img/work-prdcsg.jpg" class="timeline__item-companylogo"/>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="work__card">
-                        <img src="assets/img/work-erian.jpg" class="work__companylogo"/>
-                        <h3 class="work__title">Software Engineer (Backend, IoT) Intern</h3>
-                        <p class="work__description">May 2021 - Oct 2021</p>
-                        <div class="work__spacer"></div>
-                        <span class="work__button">
-                            See More <i class="bx bx-right-arrow-alt work__icon"></i>
-                        </span>
-                        <div class="work__modal">
-                            <div class="work__modal-content">
-                                <i class="bx bx-x work__modal-close"></i>
-                                <h3 class="work__modal-title">Software Engineer (Backend, IoT) Intern</h3>
-                                <p class="work__modal-description">
-                                    Energy Research Institute @ NTU<br>May 2021 - Oct 2021
-                                </p>
-                                <ul class="work__modal-list">
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Adapted multiple services and technologies (NGINX, PostgreSQL, MQTT, and Python) as the
-                                            project stack on Linux-based system. Setup services on workstation server and integrated
-                                            various sub-modules for team members.
-                                        </p>
-                                    </li>
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Designed and implemented database logic design; incorporated dashboard app components
-                                            using ReactJS.
-                                        </p>
-                                    </li>
-                                    <li class="work__modal-item">
-                                        <i class="bx bx-check work__modal-icon"></i>
-                                        <p class="work__modal-info">
-                                            Refined and debugged software, including creating Python automated scripts to capture
-                                            and process real-time stream data from Bluetooth Gateways and IP Cameras.
-                                        </p>
-                                    </li>
-                                </ul>
+                            <details class="timeline__panel" open>
+                                <summary>
+                                    <div class="timeline__item-title">Deep Learning Algorithm Engineering Intern</div>
+                                    <div class="timeline__item-subtitle">Panasonic R&D Center Singapore</div>
+                                </summary>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Conceptualised robust computer vision prototype using Python, OpenCV and PyTorch for real-time end-to-end social distancing and mask detection on network camera and low-power 15-watt Jetson device.</span>
+                                </div>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Investigated and trained 3 light-weight AI submodules, optimising for computation speed while maintaining good accuracy. Built and containerized system as Docker image for system reusability and deployment.</span>
+                                </div>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Utilised and trained Generative Adversarial Networks (GANs) for image-to-image translation tasks to augment existing image datasets to different domain, reducing model bias in semantic segmentation and other tasks.</span>
+                                </div>
+                            </details>
+                        </li>
+                        <li>
+                            <div class="timeline__item-extra">
+                                <span>May 2021 - Oct 2021</span>
+                                <img src="assets/img/work-erian.jpg" class="timeline__item-companylogo"/>
                             </div>
-                        </div>
-                    </div>
+                            <details class="timeline__panel">
+                                <summary>
+                                    <div class="timeline__item-title">Software Engineer (Backend, IoT) Intern</div>
+                                    <div class="timeline__item-subtitle">Energy Research Institute @ NTU</div>
+                                </summary>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Adapted multiple services and technologies (NGINX, PostgreSQL, MQTT, and Python) as the project stack on Linux-based system. Setup services on workstation server and integrated various sub-modules for team members.</span>
+                                </div>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Designed and implemented database logic design; incorporated dashboard app components using ReactJS.</span>
+                                </div>
+                                <div class="timeline__item-content">
+                                    <i class="bx bx-check work__modal-icon"></i>
+                                    <span>Refined and debugged software, including creating Python automated scripts to capture and process real-time stream data from Bluetooth Gateways and IP Cameras.</span>
+                                </div>
+                            </details>
+                        </li>
+                    </ul>        
                 </div>
             </section>
-
+            
 
             <!--=============== PORTFOLIO ===============-->
             <section class="portfolio section" id="portfolio">
@@ -991,42 +908,6 @@
             </section>
 
 
-            <!--=============== TESTIMONIALS ===============-->
-            <!-- <section class="testimonial section" style="display: none;">
-                <span class="section__subtitle">My supervisors and colleagues say</span>
-                <h2 class="section__title">Testimonial</h2>
-
-                <div class="testimonial__container container swiper">
-                    <div class="swiper-wrapper">
-                        <div class="testimonial__card swiper-slide">
-                            <img src="assets/img/testimonial1.png" alt="" class="testimonial__img">
-                            <h3 class="testimonial__name">Person 1</h3>
-                            <p class="testimonial__description">
-                                This section is incomplete.
-                            </p>
-                        </div>
-
-                        <div class="testimonial__card swiper-slide">
-                            <img src="assets/img/testimonial2.png" alt="" class="testimonial__img">
-                            <h3 class="testimonial__name">Person 2</h3>
-                            <p class="testimonial__description">
-                                This section is incomplete.
-                            </p>
-                        </div>
-
-                        <div class="testimonial__card swiper-slide">
-                            <img src="assets/img/testimonial3.png" alt="" class="testimonial__img">
-                            <h3 class="testimonial__name">Person 3</h3>
-                            <p class="testimonial__description">
-                                This section is incomplete.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </section> -->
-
-
             <!--=============== CONTACT ===============-->
             <section class="contact section" id="contact">
                 <span class="section__subtitle">Get in touch</span>
@@ -1112,7 +993,7 @@
 
         <!--=============== JS COMPONENTS ===============-->
         <script src="assets/js/scrollreveal.min.js"></script>
-        <script src="assets/js/swiper-bundle.min.js"></script>
+        <!-- <script src="assets/js/swiper-bundle.min.js"></script> -->
         <script src="assets/js/mixitup.min.js"></script>
         <script src="assets/js/email.min.js"></script>
 
