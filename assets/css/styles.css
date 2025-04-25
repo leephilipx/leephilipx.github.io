@@ -114,7 +114,7 @@ img {
 .change-theme {
   font-size: 1.25rem;
   cursor: pointer;
-  transition: .3s;
+  transition: .4s;
 }
 
 .change-theme:hover {
@@ -150,15 +150,16 @@ body.light-theme {
 .light-theme .secret__menu {
   box-shadow: 0 2px 6px rgba(0,0,0,.2);
 }
-
 .light-theme .secret__menu li.secret__menu-title {
   border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+.light-theme .secret__menu li:hover:not(.secret__menu-title) {
+  background-color: hsl(var(--first-hue), 60%, 70%);
 }
 
 .light-theme .nav__menu {
   background-color: hsla(var(--second-hue), 32%, 95%, .8);
 }
-
 .light-theme .nav__link:hover:not(.active-link) {
   background-color: hsla(var(--second-hue), 32%, 80%, .8);
 }
@@ -205,15 +206,12 @@ body.light-theme {
 .light-theme .timeline__panel[open] summary {
   border-bottom: 2px solid rgba(0,0,0,0.1);
 }
-
 .light-theme .timeline__panel summary:hover {
   background-color: hsla(var(--second-hue), 32%, 95%, .7);
 }
-
 .light-theme .timeline__item-companylogo {
   box-shadow: 0 0 5px hsla(var(--second-hue), 48%, 8%, .1);
 }
-
 .light-theme .timeline__list:before,
 .light-theme .timeline__list li:before {
   background-color: hsl(var(--second-hue), 32%, 90%);
@@ -222,11 +220,9 @@ body.light-theme {
 .light-theme .portfolio__item:hover:not(.active-portfolio) {
   background-color: hsl(var(--second-hue), 32%, 90%);
 }
-
 .light-theme .portfolio__item .active-portfolio {
   color: var(--body-color);
 }
-
 .light-theme .portfolio__img {
   border: 1px solid var(--text-color-light);
 }
@@ -367,9 +363,8 @@ body.light-theme {
 }
 
 .secret__menu li {
-  padding: 0 2px;
-  margin: 8px 10px;
-  
+  padding: 2px 4px;
+  margin: 6px 8px;
 }
 
 .secret__menu li.secret__menu-title {
@@ -583,16 +578,20 @@ body.light-theme {
 
 .about__data {
   text-align: center;
+  margin: 0 auto;
 }
 
 .about__info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: .5rem;
+  gap: 0.5rem;
   margin-bottom: 2rem;
 }
 
 .about__box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   background-color: var(--container-color);
   border-radius: .75rem;
   padding: .75rem .5rem;
@@ -613,6 +612,7 @@ body.light-theme {
 }
 
 .about__description {
+  padding: 0;
   margin-bottom: 2rem;
   font-size: var(--small-font-size);
   text-align: justify;
@@ -1341,7 +1341,8 @@ a.footer__copy-link {
   }
 
   .about__description {
-    padding: 0 5rem;
+    width: 450px;
+    margin-bottom: 2.5rem;
   }
 
   .skills__container {
@@ -1389,9 +1390,54 @@ a.footer__copy-link {
   }
 }
 
+@media screen and (max-width: 767px) {
+  /* .timeline__container {
+    background-color: red;
+  } */
+
+  .timeline__list:before,
+  .timeline__list li:before {
+    left: 5px;
+  }
+
+  .timeline__list li .timeline__item-extra,
+  .timeline__list li:nth-child(even) .timeline__item-extra {
+    position: relative;
+    left: 25px;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .timeline__panel {
+    width: 92%;
+    left: 25px;
+    top: -40px;
+    margin-bottom: 0rem;
+  }
+
+  .timeline__panel[open] {
+    top: 50px;
+    margin-bottom: 2rem;
+  }
+
+  .timeline__list li {
+    flex-direction: column;
+  }
+
+  /* .timeline__list li {
+    justify-content: flex-start;
+  } */
+}
+
 @media screen and (min-width: 767px) {
   .portfolio__container {
     grid-template-columns: repeat(2, max-content);
+  }
+
+  .timeline__container {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .contact__container {
@@ -1404,6 +1450,7 @@ a.footer__copy-link {
 /* For large devices */
 @media screen and (min-width: 992px) {
   .container {
+    max-width: max(968px, 70%);
     margin-left: auto;
     margin-right: auto;
   }
@@ -1452,22 +1499,12 @@ a.footer__copy-link {
     width: 350px;
   }
 
-  .about__data {
-    text-align: initial;
-  }
-
   .about__info {
-    justify-content: initial;
+    justify-content: center;
   }
 
   .about__box {
-    text-align: center;
     padding: 1rem 1.25rem;
-  }
-
-  .about__description {
-    padding: 0 1rem 0 0;
-    margin-bottom: 2.5rem;
   }
   
   .skills__container {
@@ -1490,7 +1527,8 @@ a.footer__copy-link {
   } */
 
   .portfolio__container {
-    gap: 3rem;
+    grid-template-columns: repeat(3, max-content);
+    /* gap: 3rem; */
   }
 
   .portfolio__card {
