@@ -801,7 +801,7 @@ body.light-theme {
 /*=============== WORK TIMELINE ===============*/
 .timeline__container {
   padding-top: 1rem;
-  margin-bottom: -20px;
+  margin-bottom: -25px;
 }
 
 .timeline__list {
@@ -811,7 +811,7 @@ body.light-theme {
 }
 
 .timeline__list li {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   position: relative;
   display: flex;
   opacity: 0;
@@ -1391,10 +1391,6 @@ a.footer__copy-link {
 }
 
 @media screen and (max-width: 767px) {
-  /* .timeline__container {
-    background-color: red;
-  } */
-
   .timeline__list:before,
   .timeline__list li:before {
     left: 5px;
@@ -1412,21 +1408,17 @@ a.footer__copy-link {
     width: 92%;
     left: 25px;
     top: -40px;
-    margin-bottom: 0rem;
+    margin-bottom: -40px;
   }
 
   .timeline__panel[open] {
     top: 50px;
-    margin-bottom: 2rem;
+    margin-bottom: 40px;
   }
 
   .timeline__list li {
     flex-direction: column;
   }
-
-  /* .timeline__list li {
-    justify-content: flex-start;
-  } */
 }
 
 @media screen and (min-width: 767px) {
