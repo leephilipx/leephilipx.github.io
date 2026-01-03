@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+        // Normalise multiple slashes
+        var path = window.location.pathname.replace(/\/+/g, '/');
+
+        // Match /apps/{appName}/...
+        var match = path.match(/^\/apps\/([^\/]+)(\/.*)?$/);
+        if (match) {
+            var app = match[1];
+            var full = window.location.pathname + window.location.search + window.location.hash;
+            var redirect = '/apps/' + app + '/index.html?_r=' + encodeURIComponent(full);
+            window.location.replace(redirect);
+            return;
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu;
+            background: #0f172a;
+            color: #e5e7eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: #020617;
+            padding: 40px;
+            border-radius: 12px;
+            max-width: 460px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
+        }
+
+        a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>404 – Page Not Found</h1>
+        <p>The page you are looking for does not exist.</p>
+        <p><a href="/">Return to homepage</a></p>
+    </div>
+</body>
+
+</html>
