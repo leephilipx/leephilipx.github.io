@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Redirecting...</title>
+    <title>Page Not Found</title>
     <script>
         // Normalise multiple slashes
         var path = window.location.pathname.replace(/\/+/g, '/');
@@ -11,11 +11,10 @@
         // Match /apps/{appName}/...
         var match = path.match(/^\/apps\/([^\/]+)(\/.*)?$/);
         if (match) {
-            var app = match[1];
-            var full = window.location.pathname + window.location.search + window.location.hash;
-            var redirect = '/apps/' + app + '/index.html?_r=' + encodeURIComponent(full);
+            document.title = "Redirecting...";
+            var full = match[2] + window.location.search + window.location.hash;
+            var redirect = '/apps/' + match[1] + '?_r=' + encodeURIComponent(full);
             window.location.replace(redirect);
-            return;
         }
     </script>
 
