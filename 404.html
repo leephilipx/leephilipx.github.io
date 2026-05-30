@@ -7,14 +7,19 @@
     <script>
         // Normalise multiple slashes
         var path = window.location.pathname.replace(/\/+/g, '/');
+        var params = new URLSearchParams(window.location.search);
 
-        // Match /apps/{appName}/...
-        var match = path.match(/^\/apps\/([^\/]+)(\/.*)?$/);
-        if (match) {
-            document.title = "Redirecting...";
-            var full = match[2] + window.location.search + window.location.hash;
-            var redirect = '/apps/' + match[1] + '?_r=' + encodeURIComponent(full);
-            window.location.replace(redirect);
+        // If _r is already present, we already tried and the app doesn't exist
+        if (!params.has('_r')) {
+            // Match /apps/{appName}/...
+            var match = path.match(/^\/apps\/([^\/]+)(\/.*)?$/);
+            if (match) {
+                document.title = "Redirecting...";
+                var rest = match[2] || '';
+                var full = rest + window.location.search + window.location.hash;
+                var redirect = '/apps/' + match[1] + '?_r=' + encodeURIComponent(full);
+                window.location.replace(redirect);
+            }
         }
     </script>
 
